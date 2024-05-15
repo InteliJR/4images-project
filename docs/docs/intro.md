@@ -1,47 +1,13 @@
----
-sidebar_position: 1
----
+# Entendimento do Problema
 
-# Tutorial Intro
+## 1.1. Empresa e Mercado
 
-Let's discover **Docusaurus in less than 5 minutes**.
+&emsp;A empresa em questão é uma organização dinâmica que atua no mercado de imagens digitais, que atualmente representa um campo promissor em relação à demanda, considerando seu crescimento acompanhado da tecnologia. Este mercado é caracterizado por uma demanda crescente por imagens de alta qualidade, essenciais para uma variedade de setores, tais como publicidade, design gráfico, mídia e publicações online. Consciente dessa demanda em constante evolução, a empresa visa preencher uma lacuna crucial ao oferecer uma solução abrangente e inovadora para aquisição e comercialização de imagens digitais. Além disso, a empresa possui um banco diversificado e único de imagens que oferece a possibilidade de oferecer ao mercado uma mercadoria e produtos diferentes dos que já foram vistos antes.
 
-## Getting Started
+## 1.2. Necessidade do Produto
 
-Get started by **creating a new site**.
+&emsp;A necessidade premente da empresa reside em desenvolver um produto de vanguarda que crie uma forma de acesso dos usuários a imagens de qualidade superior, de maneira segura e eficaz. Este produto deve, primordialmente, capacitar os usuários a navegarem e adquirirem imagens com facilidade, ao mesmo tempo em que assegura a gestão eficiente das transações. Para tanto, é imperativo que o produto possua re  cursos avançados de disponibilização de imagens, baseados em um banco de imagens já criado e metadados definidos, proporcionando uma experiência de busca personalizada e uma disponibilidade alta de conteúdos. Além disso, o produto deve oferecer opções de compra para o usuário, incluindo planos de assinatura adaptáveis às diferentes necessidades dos usuários, bem como a possibilidade de aquisição individual de imagens, conferindo versatilidade e conveniência aos clientes.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 1.3. Solução a ser Entregue
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+&emsp;A solução a ser entregue consiste em uma plataforma online de banco de imagens, concebida para atender às exigências específicas do mercado digital atual. Essa plataforma será desenvolvida para oferecer uma experiência de usuário fluida, que terá objetivo de fazer todo o intermédio em uma venda de imagem ou assinatura. Em sua essência, a plataforma será estruturada em torno de dois perfis distintos de usuários: o administrador exclusivo e os usuários comuns. O administrador, detentor de acesso privilegiado, será responsável pela curadoria do conteúdo do site, podendo realizar operações como upload, edição e exclusão de imagens, além de monitorar de forma proativa as transações efetuadas. Já os usuários comuns terão a liberdade de explorar o vasto catálogo de imagens disponíveis, navegando por categorias e coleções meticulosamente organizadas. Para garantir a segurança e a integridade dos dados dos usuários, a plataforma implementará medidas de segurança, incluindo autenticação por JWT (JSON Web Tokens), criptografia de dados sensíveis e proteção contra ameaças como injeção SQL. Ademais, as imagens serão armazenadas em um ambiente seguro de armazenamento em blobs na plataforma Azure, garantindo flexibilidade e escalabilidade quanto ao formato e tamanho dos arquivos.
