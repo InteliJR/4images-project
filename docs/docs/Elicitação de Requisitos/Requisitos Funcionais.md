@@ -9,8 +9,25 @@ Requisitos funcionais são especificações detalhadas do comportamento do siste
 ## Requisitos do administrador
 
 ## Requisitos de imagem
+| Nº RF | Requisito | Descrição | Prioridade |
+|-------|-----------|-----------|------------|
+| RF1   | Os administradores devem ter a capacidade de adicionar novas imagens ao sistema tanto através do site quanto por meio de arquivos CSV, seja individualmente ou em lotes. | 5 |
+| RF2   | Os administradores devem ter a capacidade de excluir imagens do sistema | 5 |
+| RF3   | Os administradores devem poder alterar as inforamções associadas às imagens como título, descrição, tags, especificações de uso, etc. | 5 |
+| RF4   | O usuário deve ter a capacidade de comprar (Desde a escolha da imagem até o processo de pagamento) uma imagem | 5 |
+| RF5   | O usuário deve ter a capacidade baixar uma imagem no especificações escolhidas | 5 |
+| RF6   | O usuário deve ter a capacidade curtir uma imagem | 2 | 
+| RF7   | O sistema deve redimensionar automaticamente as imagens para sua visualização adequada no frontend, garantindo uma experiência de usuário consistente. | 5 | 
+| RF8   | O sistema deve redimensionar automaticamente as imagens para sua visualização adequada no frontend, garantindo uma experiência de usuário consistente. | 5 | 
+| RF9   | Todas as imagens visualizadas no frontend devem ser exibidas com uma marca d'água, protegendo os direitos autorais e a propriedade intelectual. | 5 | 
 
 ## Requisitos de assinatura
+| Nº RF | Requisito | Descrição | Prioridade |
+|-------|-----------|-----------|------------|
+| RF1   | O sistema deve oferecer diferentes tipos de assinaturas, cada uma com um número específico de downloads permitidos e opções de manipulação do tempo entre os downloads. | 4 |
+| RF2   | Os usuários devem poder contratar uma assinatura mensal, concedendo acesso aos recursos e benefícios associados à sua escolha de plano. | 4 |
+| RF3   | Os usuários devem poder atualizar os seus planos de assinatura | 3 |
+
 
 ## Requisitos de segurança
 
