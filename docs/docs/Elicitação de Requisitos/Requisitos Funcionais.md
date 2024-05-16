@@ -6,20 +6,47 @@ Requisitos funcionais são especificações detalhadas do comportamento do siste
 
 ## Requisitos dos usuários
 
+| Nº RF | Requisito | Descrição | Prioridade |
+|-------|-----------|-----------|------------|
+| RF1   | Login do usuário na plataforma| O usuário deve conseguir se conectar à plataforma utilizando o login e senha que ele cadastrou | 5 |
+| RF2  | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha | 4 |
+RF3 | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado e adicionando a imagem ao carrinho de compras. | 4
+
+RF4 | Pagamento Online | O usuário deve ser capaz de fazer o pagamento de forma online, utilizando os padrões de mercado, como cartão de crédito ou PayPal. | 4
+
+RF5 | Visualização de Imagens na Página Inicial | O usuário deve ser capaz de visualizar algumas imagens na página inicial, organizadas por categorias ou destaques. | 3
+
+RF6 | Visualização Detalhada de Imagem | O usuário deve ser capaz de visualizar uma imagem de perto, ampliando-a e vendo informações adicionais, como título, descrição e autor. | 3
+
+RF7 | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3
+
+RF8 | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 4
+
+RF9 | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4
+
+
 ## Requisitos do administrador
+
+| Nº RF | Requisito | Descrição | Prioridade |
+|-------|-----------|-----------|------------|
+| RF01 | Adição de Imagens | O sistema deve garantir que o admin possa adicionar imagens ao banco de dados, tanto individualmente quanto em lotes. | 5
+| RF02 | Exclusão de Imagens | O sistema deve garantir que o admin possa deletar imagens do banco de dados. | 5
+| RF03 | Visualização de Transações | O sistema deve garantir que o admin possa visualizar transações feitas pelos seus usuários clientes através de uma tabela com essas informações. | 4
+| RF04 | Alteração de Descrição de Imagens | O administrador pode alterar as informações que as imagens contenham, como descrição, tags, entre outros. | 3
+| RF05 | Alteração de Preço de Imagens | O administrador pode alterar o preço das imagens sempre que necessário. | 4
 
 ## Requisitos de imagem
 | Nº RF | Requisito | Descrição | Prioridade |
 |-------|-----------|-----------|------------|
-| RF1   | Os administradores devem ter a capacidade de adicionar novas imagens ao sistema tanto através do site quanto por meio de arquivos CSV, seja individualmente ou em lotes. | 5 |
-| RF2   | Os administradores devem ter a capacidade de excluir imagens do sistema | 5 |
-| RF3   | Os administradores devem poder alterar as inforamções associadas às imagens como título, descrição, tags, especificações de uso, etc. | 5 |
-| RF4   | O usuário deve ter a capacidade de comprar (Desde a escolha da imagem até o processo de pagamento) uma imagem | 5 |
-| RF5   | O usuário deve ter a capacidade baixar uma imagem no especificações escolhidas | 5 |
-| RF6   | O usuário deve ter a capacidade curtir uma imagem | 2 | 
-| RF7   | O sistema deve redimensionar automaticamente as imagens para sua visualização adequada no frontend, garantindo uma experiência de usuário consistente. | 5 | 
-| RF8   | O sistema deve redimensionar automaticamente as imagens para sua visualização adequada no frontend, garantindo uma experiência de usuário consistente. | 5 | 
-| RF9   | Todas as imagens visualizadas no frontend devem ser exibidas com uma marca d'água, protegendo os direitos autorais e a propriedade intelectual. | 5 | 
+| RF01 | Login do usuário na plataforma | Os administradores devem ter a capacidade de adicionar novas imagens ao sistema tanto através do site quanto por meio de arquivos CSV, seja individualmente ou em lotes. | 5 |
+| RF02 | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha | 4 |
+| RF03 | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado. | 5
+| RF04 | Pagamento Online | O usuário deve ser capaz de fazer o pagamento de forma online, utilizando os padrões de mercado, como cartão de crédito ou PayPal. | 5
+|RF05 | Visualização de Imagens na Página Inicial | O usuário deve ser capaz de visualizar algumas imagens na página inicial, organizadas por categorias ou destaques. | 5
+| RF06 | Visualização Detalhada de Imagem | O usuário deve ser capaz de visualizar uma imagem de perto, ampliando-a e vendo informações adicionais, como título, descrição e preço. | 5
+| RF07 | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3
+| RF08 | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 3
+| RF09 | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4
 
 ## Requisitos de assinatura
 | Nº RF | Requisito | Descrição | Prioridade |
