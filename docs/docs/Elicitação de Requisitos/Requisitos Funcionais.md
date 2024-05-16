@@ -11,17 +11,11 @@ Requisitos funcionais são especificações detalhadas do comportamento do siste
 | RF1   | Login do usuário na plataforma| O usuário deve conseguir se conectar à plataforma utilizando o login e senha que ele cadastrou | 5 |
 | RF2  | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha | 4 |
 RF3 | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado e adicionando a imagem ao carrinho de compras. | 4
-
 RF4 | Pagamento Online | O usuário deve ser capaz de fazer o pagamento de forma online, utilizando os padrões de mercado, como cartão de crédito ou PayPal. | 4
-
 RF5 | Visualização de Imagens na Página Inicial | O usuário deve ser capaz de visualizar algumas imagens na página inicial, organizadas por categorias ou destaques. | 3
-
 RF6 | Visualização Detalhada de Imagem | O usuário deve ser capaz de visualizar uma imagem de perto, ampliando-a e vendo informações adicionais, como título, descrição e autor. | 3
-
 RF7 | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3
-
 RF8 | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 4
-
 RF9 | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4
 
 
