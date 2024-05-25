@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4910AE81-DD53-48FD-AA50-0A542D4BE4B7}|4images.csproj|c:\\users\\inteli\\documents\\intelijr\\4images-project\\app\\backend\\4images\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4910AE81-DD53-48FD-AA50-0A542D4BE4B7}|4images.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{4910AE81-DD53-48FD-AA50-0A542D4BE4B7}|4images.csproj|c:\\users\\inteli\\documents\\intelijr\\4images-project\\app\\backend\\4images\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4910AE81-DD53-48FD-AA50-0A542D4BE4B7}|4images.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAoAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-05-24T04:11:52.518Z",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T02:12:12.741Z",
               "EditorCaption": ""
             }
           ]
