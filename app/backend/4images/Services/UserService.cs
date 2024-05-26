@@ -12,10 +12,12 @@ namespace _4images.Services
     public class UserService
     {
         private readonly ApplicationDbContext _context;
+        private readonly TokenService _tokenService;
 
-        public UserService(ApplicationDbContext context)
+        public UserService(ApplicationDbContext context, TokenService tokenService)
         {
             _context = context;
+            _tokenService = tokenService;
         }
         public async Task<IEnumerable<User>> GetUsersAsync()
         {
@@ -61,6 +63,16 @@ namespace _4images.Services
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<string> AuthenticateAsync(string fullname, string password)
+        {
+            var user = await _context.Users.SingleOrDefaultAsync(u => u.FullName == fullname);
+            if (user == null || !VerifyPassword(user.Password, password))
+            {
+                return null;
+            }
+
+            return _tokenService.GenerateToken(user);
+        }
         private string HashPassword(string password)
         {
             byte[] salt = new byte[128 / 8];
@@ -77,6 +89,11 @@ namespace _4images.Services
                 numBytesRequested: 256 / 8));
 
             return hashed;
+        }
+        private bool VerifyPassword(string hashedPassword, string password)
+        {
+            // posso adicionar uma lógica mais complexa posteriormente XD
+            return hashedPassword == HashPassword(password);
         }
     }
 }

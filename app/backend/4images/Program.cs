@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using _4images.Data;
 using _4images.Services;
 
@@ -6,9 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var secretKey = builder.Configuration["Jwt:SecretKeyMuitoSecretaEssaChaveAAAAAAA"];
+builder.Services.AddSingleton(new TokenService(secretKey));
 
 // Configure the databse context
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -17,6 +22,23 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Register UserService
 builder.Services.AddScoped<UserService>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
+    };
+});
 
 var app = builder.Build();
 

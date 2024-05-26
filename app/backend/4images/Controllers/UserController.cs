@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using _4images.Models;
 using _4images.Services;
+using Microsoft.AspNetCore.Identity.Data;
 
 namespace _4images.Controllers
 {
@@ -66,6 +67,23 @@ namespace _4images.Controllers
                 return NotFound();
             }
             return NoContent();
+        }
+
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> Authenticate([FromBody] LoginRequest request)
+        {
+            var token = await _userService.AuthenticateAsync(request.Username, request.Password);
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(new { Token = token });
+        }
+
+        public class LoginRequest
+        {
+            public string Username { get; set; }
+            public string Password { get; set; }
         }
     }
 }
