@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var secretKey = builder.Configuration["Jwt:SecretKeyMuitoSecretaEssaChaveAAAAAAA"];
+var secretKey = builder.Configuration["Jwt:SecretKey"];
 builder.Services.AddSingleton(new TokenService(secretKey));
 
 // Configure the databse context
