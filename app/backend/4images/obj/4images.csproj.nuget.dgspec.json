@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\4images.csproj": {}
+    "C:\\Users\\Inteli\\OneDrive\\Documentos\\4images-project\\app\\backend\\4images\\4images.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\4images.csproj": {
+    "C:\\Users\\Inteli\\OneDrive\\Documentos\\4images-project\\app\\backend\\4images\\4images.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\4images.csproj",
+        "projectUniqueName": "C:\\Users\\Inteli\\OneDrive\\Documentos\\4images-project\\app\\backend\\4images\\4images.csproj",
         "projectName": "4images",
-        "projectPath": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\4images.csproj",
+        "projectPath": "C:\\Users\\Inteli\\OneDrive\\Documentos\\4images-project\\app\\backend\\4images\\4images.csproj",
         "packagesPath": "C:\\Users\\Inteli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Inteli\\Documents\\intelijr\\4images-project\\app\\backend\\4images\\obj\\",
+        "outputPath": "C:\\Users\\Inteli\\OneDrive\\Documentos\\4images-project\\app\\backend\\4images\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Inteli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,6 +56,12 @@
               "version": "[8.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.5, )"
             },
