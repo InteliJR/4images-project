@@ -15,12 +15,14 @@ builder.Services.AddSwaggerGen();
 var secretKey = builder.Configuration["Jwt:SecretKey"];
 builder.Services.AddSingleton(new TokenService(secretKey));
 
-// Configure the databse context
+// Configure the database context
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Register UserService
+// BlobService
+builder.Services.AddSingleton<BlobService>();
+// UserService
 builder.Services.AddScoped<UserService>();
 
 builder.Services.AddAuthentication(options =>
