@@ -1,0 +1,6 @@
+@_4images_HostAddress = http://localhost:5241
+
+GET {{_4images_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
