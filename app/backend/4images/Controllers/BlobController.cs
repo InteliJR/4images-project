@@ -30,5 +30,25 @@ namespace _4images.Controllers
             return Ok("Arquivo enviado com sucesso!");
         }
 
+        [HttpGet("list")]
+        public async Task<IActionResult> ListFiles()
+        {
+            var files = await _blobService.ListFilesAsync();
+            return Ok(files);
+        }
+
+        [HttpGet("download/{fileName}")]
+        public async Task<IActionResult> DownloadFile(string fileName)
+        {
+            var stream = await _blobService.DownloadFileAsync(fileName);
+            return File(stream, "application/octet-stream", fileName);
+        }
+
+        [HttpDelete("delete/{fileName}")]
+        public async Task<IActionResult> DeleteFile(string fileName)
+        {
+            await _blobService.DeleteFileAsync(fileName);
+            return Ok(new { message = "Arquivo excluído com sucesso!" });
+        }
     }
 }

@@ -23,5 +23,35 @@ namespace _4images.Services
 
             await blobClient.UploadAsync(fileStream, overwrite: true);
         }
+        public async Task<IEnumerable<string>> ListFilesAsync()
+        {
+            var blobServiceClient = new BlobServiceClient(_connectionString);
+            var blobContainerClient = blobServiceClient.GetBlobContainerClient(_containerName);
+
+            var blobs = new List<string>();
+            await foreach (var blobItem in blobContainerClient.GetBlobsAsync())
+            {
+                blobs.Add(blobItem.Name);
+            }
+
+            return blobs;
+        }
+        public async Task<Stream> DownloadFileAsync(string fileName)
+        {
+            var blobServiceClient = new BlobServiceClient(_connectionString);
+            var blobContainerClient = blobServiceClient.GetBlobContainerClient(_containerName);
+            var blobClient = blobContainerClient.GetBlobClient(fileName);
+
+            var downloadInfo = await blobClient.DownloadAsync();
+            return downloadInfo.Value.Content;
+        }
+        public async Task DeleteFileAsync(string fileName)
+        {
+            var blobServiceClient = new BlobServiceClient(_connectionString);
+            var blobContainerClient = blobServiceClient.GetBlobContainerClient(_containerName);
+            var blobClient = blobContainerClient.GetBlobClient(fileName);
+
+            await blobClient.DeleteIfExistsAsync();
+        }
     }
 }
