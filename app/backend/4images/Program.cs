@@ -4,23 +4,29 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using _4images.Data;
 using _4images.Services;
+using _4images;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.OperationFilter<FileOperationFilter>();
+});
 
 var secretKey = builder.Configuration["Jwt:SecretKey"];
 builder.Services.AddSingleton(new TokenService(secretKey));
 
-// Configure the databse context
+// Configure the database context
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-// Register UserService
+// BlobService
+builder.Services.AddSingleton<BlobService>();
+// UserService
 builder.Services.AddScoped<UserService>();
 
 builder.Services.AddAuthentication(options =>
