@@ -28,6 +28,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddSingleton<BlobService>();
 // UserService
 builder.Services.AddScoped<UserService>();
+// TransactionService
+builder.Services.AddScoped<TransactionService>();
 
 builder.Services.AddAuthentication(options =>
 {
