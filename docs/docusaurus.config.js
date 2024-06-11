@@ -1,20 +1,22 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Documentação',
   tagline: 'Neste documento você encontrará tudo o que precisa saber sobre o projeto feito para a empresa 4images.',
-
+  
   url: 'https://your-docusaurus-site.example.com',
   baseUrl: '/',
 
-  projectName: '4images', 
+  // Add the organizationName field
+  organizationName: 'InteliJR', // Your GitHub organization or username
+  projectName: '4images-project', // Your repository name
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'br',
+    defaultLocale: 'pt-BR',
     locales: ['pt-BR'],
   },
 
@@ -24,10 +26,11 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js'
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/InteliJR/4images-project/edit/main/website/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -75,7 +78,7 @@ const config = {
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              }
+              },
             ],
           },
           {
@@ -84,7 +87,7 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/InteliJR/4images-project',
-              }
+              },
             ],
           },
         ],
