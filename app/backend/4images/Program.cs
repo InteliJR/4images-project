@@ -9,15 +9,25 @@ using _4images;
 using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+var  MyAllowSpecificOrigins = "http://localhost:5173";
 
-// variáveis de ambiente do .env
+// variï¿½veis de ambiente do .env
 Env.Load();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://localhost:5173");
+                      });
+});
 
 // JWT
 var secretKey = Environment.GetEnvironmentVariable("SECRET_KEY");
 if (string.IsNullOrEmpty(secretKey))
 {
-    throw new InvalidOperationException("A chave secreta do JWT não foi encontrada nas variáveis de ambiente.");
+    throw new InvalidOperationException("A chave secreta do JWT nï¿½o foi encontrada nas variï¿½veis de ambiente.");
 }
 builder.Services.AddSingleton(new TokenService(secretKey));
 
@@ -25,7 +35,7 @@ builder.Services.AddSingleton(new TokenService(secretKey));
 var connectionString = Environment.GetEnvironmentVariable("DEFAULT_CONNECTION");
 if (string.IsNullOrEmpty(connectionString))
 {
-    throw new InvalidOperationException("A string de conexão do banco de dados não foi encontrada nas variáveis de ambiente.");
+    throw new InvalidOperationException("A string de conexï¿½o do banco de dados nï¿½o foi encontrada nas variï¿½veis de ambiente.");
 }
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -63,7 +73,7 @@ builder.Services.AddAuthentication(options =>
 
     if (string.IsNullOrEmpty(googleClientId) || string.IsNullOrEmpty(googleClientSecret))
     {
-        throw new InvalidOperationException("As credenciais do Google Auth não foram encontradas nas variáveis de ambiente.");
+        throw new InvalidOperationException("As credenciais do Google Auth nï¿½o foram encontradas nas variï¿½veis de ambiente.");
     }
 
     options.ClientId = googleClientId;
@@ -79,7 +89,7 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// pipeline de requisições HTTP
+// pipeline de requisiï¿½ï¿½es HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -87,6 +97,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthentication();
 app.UseAuthorization();
