@@ -28,9 +28,6 @@ namespace _4images.Models
         [Required]
         public SignatureType Signature { get; set; }
 
-        // Navegação para a lista de transações associadas a este usuário
-        public ICollection<Transaction> Transactions { get; set; }
-
         public string GoogleId { get; set; }
     }
 }
