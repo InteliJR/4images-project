@@ -6,6 +6,7 @@ A "Arquitetura IT" do nosso projeto é projetada para fornecer uma visão clara 
 
 <div align="center">
     <p><b>Figura 1 </b>- Arquitetura IT [visão geral] </p>
+    <p>aqui vai uma imagem</p>
     <p>Fonte: Elaboração dos autores</p>
 </div>
 
