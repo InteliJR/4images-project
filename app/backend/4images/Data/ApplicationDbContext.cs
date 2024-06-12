@@ -8,7 +8,7 @@ namespace _4images.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<Curtida> Curtidas { get; set; }
+        public DbSet<Like> Likes { get; set; }
         public DbSet<Download> Downloads { get; set; }
     }
 }

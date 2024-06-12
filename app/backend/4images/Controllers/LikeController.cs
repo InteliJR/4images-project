@@ -1,4 +1,4 @@
-﻿using _4images.Models;
+using _4images.Models;
 using _4images.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,11 +6,11 @@ namespace _4images.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CurtidaController : Controller
+    public class LikeController : Controller
     {
         private readonly CurtidaService _curtidaService;
 
-        public CurtidaController(CurtidaService curtidaService)
+        public LikeController(CurtidaService curtidaService)
         {
             _curtidaService = curtidaService;
         }

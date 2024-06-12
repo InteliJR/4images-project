@@ -32,7 +32,7 @@ builder.Services.AddScoped<UserService>();
 // TransactionService
 builder.Services.AddScoped<TransactionService>();
 // CurtidaService
-builder.Services.AddScoped<CurtidaService>();
+builder.Services.AddScoped<LikeService>();
 
 // config google auth
 builder.Services.AddAuthentication(options =>

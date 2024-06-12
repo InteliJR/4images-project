@@ -1,8 +1,8 @@
-﻿using Microsoft.Identity.Client;
+using Microsoft.Identity.Client;
 
 namespace _4images.Models
 {
-    public class Curtida
+    public class Like
     {
         public int Id { get; set; }
 

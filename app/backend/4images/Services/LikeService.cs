@@ -1,14 +1,14 @@
-﻿using _4images.Data;
+using _4images.Data;
 using _4images.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace _4images.Services
 {
-    public class CurtidaService
+    public class LikeService
     {
         private readonly ApplicationDbContext _context;
 
-        public CurtidaService(ApplicationDbContext context)
+        public LikeService(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -51,6 +51,5 @@ namespace _4images.Services
             await _context.SaveChangesAsync();
             return curtida;
         }
-        
     }
 }
