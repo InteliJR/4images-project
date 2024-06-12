@@ -13,43 +13,43 @@ namespace _4images.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Curtida>> GetCurtidasAsync()
+        public async Task<IEnumerable<Like>> GetLikesAsync()
         {
-            return await _context.Curtidas.ToListAsync();
+            return await _context.Likes.ToListAsync();
         }
 
-        public async Task<Curtida> GetCurtidaByIdAsync(int id)
+        public async Task<Like> GetLikeByIdAsync(int id)
         {
-            return await _context.Curtidas.FindAsync(id);
+            return await _context.Likes.FindAsync(id);
         }
 
-        public async Task<IEnumerable<Curtida>> GetCurtidaByUserAsync(int userId)
+        public async Task<IEnumerable<Like>> GetLikeByUserAsync(int userId)
         {
-            var curtidas = await _context.Curtidas
+            var likes = await _context.Likes
                                         .Where(c => c.UserId == userId)
                                         .ToListAsync();
-            return curtidas;
+            return likes;
         }
 
-        public async Task<IEnumerable<Curtida>> GetCurtidaByImageAsync(int imageId)
+        public async Task<IEnumerable<Like>> GetLikeByImageAsync(int imageId)
         {
-            var curtidas = await _context.Curtidas
+            var likes = await _context.Likes
                                         .Where(c => c.ImageId == imageId)
                                         .ToListAsync();
-            return curtidas;
+            return likes;
         }
 
-        public async Task<Curtida> CreateCurtidaAsync(Curtida curtida)
+        public async Task<Like> CreateLikeAsync(Like like)
         {
             // Validar User
-            var userId = await _context.Users.FindAsync(curtida.UserId);
+            var userId = await _context.Users.FindAsync(like.UserId);
             if (userId == null) return null;
             
             // Validar Image
             
-            _context.Curtidas.Add(curtida);
+            _context.Likes.Add(like);
             await _context.SaveChangesAsync();
-            return curtida;
+            return like;
         }
     }
 }

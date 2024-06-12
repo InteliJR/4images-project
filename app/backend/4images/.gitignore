@@ -99,6 +99,5 @@ $RECYCLE.BIN/
 *.sublime-workspace
 *.sublime-project
 
-# Configuration files
-appsettings.json
-appsettings.Development.json
+# .env
+.env

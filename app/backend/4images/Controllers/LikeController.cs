@@ -8,36 +8,36 @@ namespace _4images.Controllers
     [Route("api/[controller]")]
     public class LikeController : Controller
     {
-        private readonly CurtidaService _curtidaService;
+        private readonly LikeService _likeService;
 
-        public LikeController(CurtidaService curtidaService)
+        public LikeController(LikeService likeService)
         {
-            _curtidaService = curtidaService;
+            _likeService = likeService;
         }
         [HttpGet]
-        public async Task<IEnumerable<Curtida>> GetCurtidas()
+        public async Task<IEnumerable<Like>> GetLikes()
         {
-            return await _curtidaService.GetCurtidasAsync();
+            return await _likeService.GetLikesAsync();
         }
         [HttpGet("{id}")]
-        public async Task<Curtida> GetCurtidasById(int id)
+        public async Task<Like> GetLikesById(int id)
         {
-            return await _curtidaService.GetCurtidaByIdAsync(id);
+            return await _likeService.GetLikeByIdAsync(id);
         }
         [HttpGet]
-        public async Task<IEnumerable<Curtida>> GetCurtidasByUser(int userId)
+        public async Task<IEnumerable<Like>> GetLikesByUser(int userId)
         {
-            return await _curtidaService.GetCurtidaByUserAsync(userId);
+            return await _likeService.GetLikeByUserAsync(userId);
         }
         [HttpGet]
-        public async Task<IEnumerable<Curtida>> GetCurtidaByImage(int imageId)
+        public async Task<IEnumerable<Like>> GetLikeByImage(int imageId)
         {
-            return await _curtidaService.GetCurtidaByImageAsync(imageId);
+            return await _likeService.GetLikeByImageAsync(imageId);
         }
         [HttpPost]
-        public async Task<Curtida> CreateCurtida(Curtida curtida)
+        public async Task<Like> CreateLike(Like like)
         {
-            return await _curtidaService.CreateCurtidaAsync(curtida);
+            return await _likeService.CreateLikeAsync(like);
         }
     }
 }
