@@ -95,5 +95,23 @@ namespace _4images.Services
             // posso adicionar uma lógica mais complexa posteriormente XD
             return hashedPassword == HashPassword(password);
         }
+        public async Task<User> GetUserByGoogleIdAsync(string googleId)
+        {
+            return await _context.Users.SingleOrDefaultAsync(u => u.GoogleId == googleId);
+        }
+        public async Task<User> CreateUserFromGoogleAsync(string fullName, string email, string googleId)
+        {
+            var user = new User
+            {
+                FullName = fullName,
+                Email = email,
+                GoogleId = googleId,
+                Signature = SignatureType.cooper // default
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
     }
 }

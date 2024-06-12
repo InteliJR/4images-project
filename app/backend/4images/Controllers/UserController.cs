@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using _4images.Models;
 using _4images.Services;
 using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace _4images.Controllers
 {
@@ -12,10 +16,12 @@ namespace _4images.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserService _userService;
+        private readonly TokenService _tokenService;
 
-        public UserController(UserService userService)
+        public UserController(UserService userService, TokenService tokenService)
         {
             _userService = userService;
+            _tokenService = tokenService;
         }
 
         [HttpGet]
@@ -84,6 +90,41 @@ namespace _4images.Controllers
         {
             public string Username { get; set; }
             public string Password { get; set; }
+        }
+
+        [HttpGet("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            if (result?.Principal == null)
+                return BadRequest();
+
+            var claims = result.Principal.Identities
+                .FirstOrDefault()?.Claims.Select(claim => new
+                {
+                    claim.Type,
+                    claim.Value
+                });
+
+            var googleId = result.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var user = await _userService.GetUserByGoogleIdAsync(googleId);
+
+            if (user == null)
+            {
+                var fullName = result.Principal.FindFirst(ClaimTypes.Name)?.Value;
+                var email = result.Principal.FindFirst(ClaimTypes.Email)?.Value;
+                user = await _userService.CreateUserFromGoogleAsync(fullName, email, googleId);
+            }
+
+            var token = _tokenService.GenerateToken(user);
+            return Ok(new { Token = token });
         }
     }
 }
