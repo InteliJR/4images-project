@@ -7,5 +7,6 @@ namespace _4images.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
         public DbSet<User> Users { get; set; }
+        public DbSet<Download> Downloads { get; set; }
     }
 }
