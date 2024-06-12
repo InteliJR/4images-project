@@ -30,6 +30,8 @@ builder.Services.AddSingleton<BlobService>();
 builder.Services.AddScoped<UserService>();
 // TransactionService
 builder.Services.AddScoped<TransactionService>();
+// CurtidaService
+builder.Services.AddScoped<CurtidaService>();
 
 builder.Services.AddAuthentication(options =>
 {
