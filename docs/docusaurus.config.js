@@ -5,8 +5,8 @@ const config = {
   title: 'Documentação',
   tagline: 'Neste documento você encontrará tudo o que precisa saber sobre o projeto feito para a empresa 4images.',
   
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  url: 'https://intelijr.github.io',
+  baseUrl: '/4images-project/',
 
   // Add the organizationName field
   organizationName: 'InteliJR', // Your GitHub organization or username
