@@ -29,6 +29,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddSingleton<BlobService>();
 // userService
 builder.Services.AddScoped<UserService>();
+// TransactionService
+builder.Services.AddScoped<TransactionService>();
+// CurtidaService
+builder.Services.AddScoped<CurtidaService>();
 
 // config google auth
 builder.Services.AddAuthentication(options =>
