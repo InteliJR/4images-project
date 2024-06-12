@@ -6,7 +6,6 @@ A "Arquitetura IT" do nosso projeto é projetada para fornecer uma visão clara 
 
 <div align="center">
     <p><b>Figura 1 </b>- Arquitetura IT [visão geral] </p>
-    <img src="../../static/img/arquitetura_it.jpg" alt="Arquitetura IT [visão geral]">
     <p>Fonte: Elaboração dos autores</p>
 </div>
 
@@ -37,7 +36,6 @@ O fluxo de informações e das causas e consequências para cada evento da aplic
 
 <div align="center">
     <p><b>Figura 2 </b>- Arquitetura IT [visão específica] </p>
-    <img src="../../static/img/arquitetura_it_visao_especifica.jpg" alt="Arquitetura IT [visão geral]">
     <p>Fonte: Elaboração dos autores</p>
 </div>
 

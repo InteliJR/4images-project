@@ -11,7 +11,7 @@ const config = {
   // Add the organizationName field
   organizationName: 'InteliJR', // Your GitHub organization or username
   projectName: '4images-project', // Your repository name
-
+  deploymentBranch: 'documentation',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
