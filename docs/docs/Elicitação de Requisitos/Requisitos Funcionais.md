@@ -4,34 +4,22 @@
 
 Requisitos funcionais são especificações detalhadas do comportamento do sistema ou o que o sistema deve fazer. Eles descrevem as funções que um sistema deve executar, como processos, informações a serem manipuladas, funcionalidade a ser fornecida por interfaces específicas e comportamento em resposta a entradas específicas ou condições em seu ambiente de operação. Em outras palavras, os requisitos funcionais definem “o que” o sistema deve fazer para atender às necessidades e expectativas do usuário.
 
-## Requisitos dos usuários
-
-Os requisitos dos usuários são especificações detalhadas que definem as funcionalidades que a plataforma deve oferecer aos seus clientes. Eles incluem as ações que os usuários podem realizar, como registro, login, recuperação de senha, compra e visualização de imagens, interação com o conteúdo (como curtir, comentar e compartilhar), gestão de perfil e histórico de compras, além de funcionalidades adicionais que melhoram a experiência do usuário, como listas de desejos, notificações de promoções e suporte ao cliente. Esses requisitos visam garantir que os usuários possam navegar e utilizar a plataforma de forma intuitiva, segura e eficiente, atendendo suas necessidades e expectativas.
-
-| Nº RF | Requisito | Descrição | Prioridade |
-|-------|-----------|-----------|------------|
-| RF1   | Login do usuário na plataforma| O usuário deve conseguir se conectar à plataforma utilizando o login e senha que ele cadastrou. | 5 |
-| RF2   | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha. | 4 |
-| RF3   | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado e adicionando a imagem ao carrinho de compras. | 4 |
-| RF4   | Pagamento Online | O usuário deve ser capaz de fazer o pagamento de forma online, utilizando os padrões de mercado, como cartão de crédito ou PayPal. | 4 |
-| RF5   | Visualização de Imagens na Página Inicial | O usuário deve ser capaz de visualizar algumas imagens na página inicial, organizadas por categorias ou destaques. | 3 |
-| RF6   | Visualização Detalhada de Imagem | O usuário deve ser capaz de visualizar uma imagem de perto, ampliando-a e vendo informações adicionais, como título, descrição e autor. | 3 |
-| RF7   | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3 |
-| RF8   | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 4 |
-| RF9   | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4 |
+| Nº RF | Requisito | Descrição | Prioridade | Tipo |
+|-------|-----------|-----------|------------| ---- |
+| RF01   | Login do usuário na plataforma| O usuário deve conseguir se conectar à plataforma utilizando o login e senha que ele cadastrou. | 5 | 
+| RF02   | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha. | 4 |
+| RF03   | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado e adicionando a imagem ao carrinho de compras. | 4 |
+| RF04   | Pagamento Online | O usuário deve ser capaz de fazer o pagamento de forma online, utilizando os padrões de mercado, como cartão de crédito ou PayPal. | 4 |
+| RF05   | Visualização de Imagens na Página Inicial | O usuário deve ser capaz de visualizar algumas imagens na página inicial, organizadas por categorias ou destaques. | 3 |
+| RF06   | Visualização Detalhada de Imagem | O usuário deve ser capaz de visualizar uma imagem de perto, ampliando-a e vendo informações adicionais, como título, descrição e autor. | 3 |
+| RF07   | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3 |
+| RF08   | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 4 |
+| RF09   | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4 |
 | RF10  | Registro de Usuário | O usuário deve ser capaz de se registrar na plataforma fornecendo informações básicas como nome, email e senha. | 5 |
 | RF11  | Perfil de Usuário | O usuário deve ser capaz de acessar e editar seu perfil, incluindo informações como nome, endereço de email e preferências. | 5 |
 | RF12  | Histórico de Compras | O usuário deve ser capaz de visualizar um histórico de suas compras anteriores. | 2 |
 | RF13  | Download de Imagens em Diferentes Resoluções | O usuário deve ser capaz de escolher a resolução da imagem no momento do download, conforme o nível de sua compra ou assinatura. | 3 |
 | RF14  | Suporte ao Cliente | O usuário deve ser capaz de acessar uma seção de suporte ao cliente para obter ajuda ou informações adicionais. | 2 |
-
-
-## Requisitos do administrador
-
-Os requisitos do administrador são especificações detalhadas que definem as funcionalidades que a plataforma deve oferecer aos administradores do sistema. Eles incluem ações que os administradores podem realizar, como a gestão de imagens (adição, exclusão e alteração de informações), monitoramento de transações e atividades dos usuários, gestão de contas e assinaturas, geração de relatórios de vendas e desempenho, configuração de promoções e categorias, realização de backups e restaurações, e interação com os usuários através de suporte e notificações. Esses requisitos visam garantir que os administradores possam gerenciar a plataforma de forma eficiente e segura, mantendo o controle sobre o conteúdo, as operações e a segurança do sistema.
-
-| Nº RF | Requisito | Descrição | Prioridade |
-|-------|-----------|-----------|------------|
 | RF01 | Adição de Imagens | O sistema deve garantir que o admin possa adicionar imagens ao banco de dados, tanto individualmente quanto em lotes. | 5 |
 | RF02 | Exclusão de Imagens | O sistema deve garantir que o admin possa deletar imagens do banco de dados. | 5 |
 | RF03 | Visualização de Transações | O sistema deve garantir que o admin possa visualizar transações feitas pelos seus usuários clientes através de uma tabela com essas informações. | 4 |
@@ -43,11 +31,6 @@ Os requisitos do administrador são especificações detalhadas que definem as f
 | RF09 | Suporte ao Cliente | O administrador deve ser capaz de acessar e responder às solicitações de suporte dos usuários. | 3 |
 | RF10 | Gestão de Assinaturas | O administrador deve ser capaz de visualizar e gerenciar assinaturas dos usuários, incluindo atualizações, cancelamentos e renovações. | 2 |
 | RF11 | Exportação de Dados | O administrador deve ser capaz de exportar dados de usuários, transações e imagens para relatórios externos ou análise. | 2 |
-
-
-## Requisitos de imagem
-| Nº RF | Requisito | Descrição | Prioridade |
-|-------|-----------|-----------|------------|
 | RF01 | Login do usuário na plataforma | Os administradores devem ter a capacidade de adicionar novas imagens ao sistema tanto através do site quanto por meio de arquivos CSV, seja individualmente ou em lotes. | 5 |
 | RF02 | Recuperação de senha | O usuário deve conseguir recuperar a sua senha da plataforma através de seu email cadastrado e receber um email com a autenticação para mudar a senha | 4 |
 | RF03 | Compra de Imagem | O usuário deve ser capaz de comprar uma imagem com o tamanho de sua escolha, selecionando o tamanho desejado. | 5
@@ -57,24 +40,9 @@ Os requisitos do administrador são especificações detalhadas que definem as f
 | RF07 | Curtir Imagem | O usuário deve ser capaz de curtir uma imagem, adicionando-a à sua lista de imagens favoritas ou marcando-a como interessante. | 3
 | RF08 | Solicitação de Fotos | O sistema deve garantir que o usuário possa abrir solicitações de fotos para o usuário administrador, descrevendo o tipo de imagem desejada e fornecendo informações de contato. | 3
 | RF09 | Pesquisa de Imagens | O usuário deve ser capaz de pesquisar por uma imagem, utilizando palavras-chave ou filtros, para encontrar imagens específicas que atendam às suas necessidades. | 4
-
-## Requisitos de assinatura
-
-Os requisitos de assinatura são especificações detalhadas que definem as opções relacionadas aos planos de assinatura disponíveis na plataforma. Eles abrangem desde a oferta de diferentes tipos de assinaturas e a contratação de planos mensais, até a atualização, cancelamento, e gerenciamento das assinaturas pelos usuários. Estes requisitos garantem que os usuários possam escolher e gerenciar suas assinaturas de acordo com suas necessidades, enquanto os administradores podem configurar e oferecer planos personalizados, aplicar promoções e monitorar o uso das assinaturas.
-
-| Nº RF | Requisito | Descrição | Prioridade |
-|-------|-----------|-----------|------------|
 | RF1   | O sistema deve oferecer diferentes tipos de assinaturas, cada uma com um número específico de downloads permitidos e opções de manipulação do tempo entre os downloads. | 4 |
 | RF2   | Os usuários devem poder contratar uma assinatura mensal, concedendo acesso aos recursos e benefícios associados à sua escolha de plano. | 4 |
 | RF3   | Os usuários devem poder atualizar os seus planos de assinatura | 3 |
-
-
-## Requisitos de segurança
-
-Os requisitos de segurança adicionais visam fortalecer ainda mais a proteção do sistema contra ameaças potenciais, abordando aspectos como controle de sessão, proteção contra ataques de força bruta, monitoramento em tempo real, auditoria de acesso e controle de acesso baseado em função. Além disso, medidas adicionais de segurança na camada de apresentação e educação em segurança do usuário são essenciais para mitigar riscos e garantir a integridade, confidencialidade e disponibilidade dos dados da plataforma.
-
-| Nº RF | Requisito | Descrição | Prioridade |
-|-------|-----------|-----------|------------|
 | RF1   | Autenticação de todos os usuários | Dado a necessidade de segurança tanto das imagens da aplicação quanto das transações realizadas dentro da plataforma, é necessário que a aplicação realize autenticação dos usuários para que eles possam ter acesso aos serviços fornecidos, para usuários não autenticados a aplicação não permitirá ações que possam comprometer a integridade dos dados e dos outros clientes. | 5 |
 | RF2   | Suporte a múltiplos métodos de autenticação | É necessário garantir que os usuários possam fazer o processo de autenticação de formas diversas tais quais: o cadastro padrão da aplicação, autenticação de dois fatores e autenticação por meio de terceiros como conta do Google e de redes sociais. | 4 |
 | RF3   | Integridade dos diferentes níveis de acesso | Considerando a característica da aplicação de possuir diferentes tipos e níveis de assinatura, é de suma importância que os níveis de acesso para cada usuário sejam bem definidos e protegidos para garantir que imagens do cliente não possam ter sua integridade violada. Ademais, é de suma importância garantir que apenas o usuário administrador possa ter interações mais complexas com esses dados audiovisuais. | 5 |
