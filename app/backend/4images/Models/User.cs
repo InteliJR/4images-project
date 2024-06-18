@@ -28,6 +28,6 @@ namespace _4images.Models
         [Required]
         public SignatureType Signature { get; set; }
 
-        public string GoogleId { get; set; }
+        public string? GoogleId { get; set; }
     }
 }
