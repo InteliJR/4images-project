@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Cryptography.Xml;
 
 namespace _4images.Models
 {
@@ -13,19 +14,19 @@ namespace _4images.Models
         [Required]
         public int FileFK { get; set; }
 
-        // [ForeignKey("FileId")]
-        // public virtual File File { get; set; }
+        [ForeignKey("FileFK")]
+        public virtual FileMetadata FileMetadata { get; set; }
 
         [Required]
         public int TransactionFK { get; set; }
 
-        // [ForeignKey("TransactionId")]
-        // public virtual Transaction Transaction { get; set; }
+        [ForeignKey("TransactionFK")]
+        public virtual Transaction Transaction { get; set; }
 
         [Required]
         public int SignatureFK { get; set; }
 
-        // [ForeignKey("SubscriptionId")]
-        // public virtual Subscription Subscription { get; set; }
+        [ForeignKey("SignatureFK")]
+        public virtual Signature Signature { get; set; }
     }
 }
