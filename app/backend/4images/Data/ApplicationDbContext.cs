@@ -10,5 +10,6 @@ namespace _4images.Data
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Like> Likes { get; set; }
         public DbSet<Download> Downloads { get; set; }
+        public DbSet<FileMetadata> FileMetadatas { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using _4images.Services;
+using _4images.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -9,9 +10,12 @@ namespace _4images.Controllers
     public class BlobController : ControllerBase
     {
         private readonly BlobService _blobService;
-        public BlobController(BlobService blobService)
+        private readonly IFileMetadataService _fileMetadataService;
+
+        public BlobController(BlobService blobService, IFileMetadataService fileMetadataService)
         {
             _blobService = blobService;
+            _fileMetadataService = fileMetadataService;
         }
 
         [HttpPost("upload")]
@@ -22,10 +26,24 @@ namespace _4images.Controllers
                 return BadRequest("Arquivo não enviado ou está vazio.");
             }
 
+            var fileName = file.FileName;
+            var contentType = file.ContentType;
+            var size = file.Length;
+
             using (var stream = file.OpenReadStream())
             {
-                await _blobService.UploadFileAsync(stream, file.FileName);
+                await _blobService.UploadFileAsync(stream, fileName);
             }
+
+            var fileMetadata = new FileMetadata
+            {
+                BlobUrl = $"{_blobService.GetBlobUrl(fileName)}",
+                FileName = fileName,
+                ContentType = contentType,
+                Size = size
+            };
+
+            await _fileMetadataService.AddFileMetadataAsync(fileMetadata);
 
             return Ok("Arquivo enviado com sucesso!");
         }

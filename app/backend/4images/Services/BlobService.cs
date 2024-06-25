@@ -65,5 +65,14 @@ namespace _4images.Services
 
             await blobClient.DeleteIfExistsAsync();
         }
+
+        public string GetBlobUrl(string fileName)
+        {
+            var blobServiceClient = CreateBlobServiceClient();
+            var blobContainerClient = blobServiceClient.GetBlobContainerClient(_containerName);
+            var blobClient = blobContainerClient.GetBlobClient(fileName);
+
+            return blobClient.Uri.ToString();
+        }
     }
 }
