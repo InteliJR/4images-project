@@ -4,6 +4,8 @@ namespace _4images.Models
 {
     public enum SignatureType
     {
+        admin,
+        photographer,
         cooper,
         silver,
         gold

@@ -4,7 +4,6 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using _4images.Models;
-using Microsoft.AspNetCore.Http.Connections;
 
 namespace _4images.Services
 {
@@ -27,7 +26,8 @@ namespace _4images.Services
                 {
                     new Claim(ClaimTypes.Name, user.FullName),
                     new Claim(ClaimTypes.Email, user.Email),
-                    // posso adicionar outros atributos aqui dps
+                    new Claim(ClaimTypes.NameIdentifier, user.UserName),
+                    new Claim("SignatureType", user.Signature.ToString())
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

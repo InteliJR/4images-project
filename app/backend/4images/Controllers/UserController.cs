@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using _4images.Models;
 using _4images.Services;
-using Microsoft.AspNetCore.Identity.Data;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
 namespace _4images.Controllers
@@ -25,12 +26,15 @@ namespace _4images.Controllers
         }
 
         [HttpGet]
+        // [Authorize]
+        [AllowAnonymous]
         public async Task<IEnumerable<User>> GetUsers()
         {
             return await _userService.GetUsersAsync();
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<User>> GetUser(int id)
         {
             var user = await _userService.GetUserByIdAsync(id);
@@ -41,6 +45,7 @@ namespace _4images.Controllers
             return user;
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<User>> CreateUser(User user)
         {
@@ -49,6 +54,7 @@ namespace _4images.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateUser(int id, User user)
         {
             if (id != user.Id)
@@ -65,6 +71,7 @@ namespace _4images.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var result = await _userService.DeleteUserAsync(id);
@@ -75,6 +82,7 @@ namespace _4images.Controllers
             return NoContent();
         }
 
+        [AllowAnonymous]
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] LoginRequest request)
         {
@@ -92,6 +100,7 @@ namespace _4images.Controllers
             public string Password { get; set; }
         }
 
+        [AllowAnonymous]
         [HttpGet("google-login")]
         public IActionResult GoogleLogin()
         {
@@ -99,6 +108,7 @@ namespace _4images.Controllers
             return Challenge(properties, GoogleDefaults.AuthenticationScheme);
         }
 
+        [AllowAnonymous]
         [HttpGet("google-response")]
         public async Task<IActionResult> GoogleResponse()
         {

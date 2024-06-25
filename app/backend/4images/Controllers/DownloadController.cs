@@ -3,9 +3,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using _4images.Models;
 using _4images.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _4images.Controllers
 {
+    [Authorize(Policy = "AdminOnly")]
     [Route("api/[controller]")]
     [ApiController]
     public class DownloadController : ControllerBase
