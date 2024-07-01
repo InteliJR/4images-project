@@ -1,57 +1,103 @@
-name: Deploy Docusaurus
+import { themes as prismThemes } from 'prism-react-renderer';
 
-on:
-  push:
-    branches:
-      - documentation
-  pull_request:
-    branches:
-      - documentation
-  workflow_dispatch:
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: 'Documentação',
+  tagline: 'Neste documento você encontrará tudo o que precisa saber sobre o projeto feito para a empresa 4images.',
+  
+  url: 'https://intelijr.github.io',
+  baseUrl: '/4images-project/',
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  // Add the organizationName field
+  organizationName: 'InteliJR', // Your GitHub organization or username
+  projectName: '4images-project', // Your repository name
+  deploymentBranch: 'documentation',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  i18n: {
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR'],
+  },
 
-env:
-  NODE_OPTIONS: --max-old-space-size=6144
+  presets: [
+    [
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          editUrl: 'https://github.com/InteliJR/4images-project/edit/main/website/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      }),
+    ],
+  ],
 
-jobs:
-  build:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      image: 'img/docusaurus-social-card.jpg',
+      navbar: {
+        title: 'Início',
+        logo: {
+          alt: 'LogoDocs',
+          src: 'img/logo.svg',
+        },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Documentação',
+          },
+          {
+            href: 'https://github.com/InteliJR/4images-project',
+            label: 'GitHub',
+            position: 'right',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              {
+                label: 'Documentação',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                href: 'https://github.com/InteliJR/4images-project',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} Inteli Júnior, Inc. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: prismThemes.github,
+        darkTheme: prismThemes.dracula,
+      },
+    }),
+};
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: latest
-
-    - name: Install and Build
-      run: |
-        cd docs  # Verifique se este é o diretório correto
-        npm install
-        npm run build
-        mv build ../build  # Certifique-se de que deseja mover a build para o diretório superior
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v3
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: ./build  # Verifique se este caminho está correto após a movimentação
-
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+export default config;
