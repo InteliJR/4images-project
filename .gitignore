@@ -1,0 +1,4 @@
+
+*.dll
+/app/backend/4images.Tests/bin
+/app/backend/4images.Tests/obj
