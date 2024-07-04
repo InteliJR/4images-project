@@ -1,7 +1,6 @@
 ﻿using _4images.Services;
 using _4images.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace _4images.Controllers
 {
@@ -10,9 +9,9 @@ namespace _4images.Controllers
     public class BlobController : ControllerBase
     {
         private readonly BlobService _blobService;
-        private readonly IFileMetadataService _fileMetadataService;
+        private readonly FileMetadataService _fileMetadataService;
 
-        public BlobController(BlobService blobService, IFileMetadataService fileMetadataService)
+        public BlobController(BlobService blobService, FileMetadataService fileMetadataService)
         {
             _blobService = blobService;
             _fileMetadataService = fileMetadataService;

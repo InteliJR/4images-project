@@ -1,11 +1,10 @@
 ﻿using _4images.Data;
 using _4images.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace _4images.Services
 {
-    public class FileMetadataService : IFileMetadataService
+    public class FileMetadataService
     {
         private readonly ApplicationDbContext _context;
 

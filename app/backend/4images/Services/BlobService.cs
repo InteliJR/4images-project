@@ -1,7 +1,4 @@
 ﻿using Azure.Storage.Blobs;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
 
 namespace _4images.Services
 {
