@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using _4images.Models;
 
 namespace _4images.Data
@@ -11,5 +11,10 @@ namespace _4images.Data
         public DbSet<Like> Likes { get; set; }
         public DbSet<Download> Downloads { get; set; }
         public DbSet<FileMetadata> FileMetadatas { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+            optionsBuilder.LogTo(Console.WriteLine, LogLevel.Information);
+        }
     }
 }
