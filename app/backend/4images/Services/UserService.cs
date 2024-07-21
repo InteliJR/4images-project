@@ -134,7 +134,7 @@ namespace _4images.Services
                 FullName = fullName,
                 Email = email,
                 GoogleId = googleId,
-                Signature = SignatureType.cooper // default
+                Signature = "cooper" // default
             };
 
             _context.Users.Add(user);
