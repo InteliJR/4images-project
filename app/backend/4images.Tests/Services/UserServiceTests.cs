@@ -35,6 +35,33 @@ namespace _4images.Tests.Services
             _context.Dispose();
         }
 
+         [Test]
+        public async Task CreateUserAsync_ShouldAddUserAndReturnUser()
+        {
+            // Arrange
+            var user = new User
+            {
+                FullName = "Luigi Local Lanches",
+                UserName = "Luigi",
+                Email = "luigipatrao@example.com",
+                Password = "o dogão da local lanches é foda de verdade",
+                Signature = "localLanches"
+            };
+
+            // Act
+            var createdUser = await _userService.CreateUserAsync(user);
+
+            // Assert
+            ClassicAssert.IsNotNull(createdUser);
+            ClassicAssert.AreEqual("Luigi Local Lanches", createdUser.FullName);
+            ClassicAssert.AreEqual("Luigi", createdUser.UserName);
+            ClassicAssert.AreEqual("luigipatrao@example.com", createdUser.Email);
+
+            var usersInDb = await _context.Users.ToListAsync();
+            ClassicAssert.AreEqual(1, usersInDb.Count);
+            ClassicAssert.AreEqual("Luigi Local Lanches", usersInDb[0].FullName);
+        }
+
         [Test]
         public async Task GetUsersAsync_ShouldReturnAllUsers()
         {
@@ -119,7 +146,7 @@ namespace _4images.Tests.Services
         //     _context.Users.Add(user);
         //     await _context.SaveChangesAsync();
 
-        //     // Act
+        //     // Act   
         //     var token = await _userService.AuthenticateAsync(user.FullName, "wrongpassword");
 
         //     // Assert
