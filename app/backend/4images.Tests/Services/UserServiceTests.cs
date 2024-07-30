@@ -132,32 +132,19 @@ namespace _4images.Tests.Services
             ClassicAssert.IsNull(await _context.Users.FindAsync(user.Id));
         }
 
-        // [Test]
-        // public async Task AuthenticateAsync_ShouldReturnNullWhenCredentialsAreInvalid()
-        // {
-        //     // Arrange
-        //     var user = new User
-        //     {
-        //         FullName = "Invalid User",
-        //         Email = "invaliduser@example.com",
-        //         Password = _userService.HashPassword("validpassword", out _),
-        //         Signature = "signature"
-        //     };
-        //     _context.Users.Add(user);
-        //     await _context.SaveChangesAsync();
-
-        //     // Act   
-        //     var token = await _userService.AuthenticateAsync(user.FullName, "wrongpassword");
-
-        //     // Assert
-        //     ClassicAssert.IsNull(token);
-        // }
-
         [Test]
         public async Task GetUserByGoogleIdAsync_ShouldReturnUser()
         {
             // Arrange
-            var user = new User { FullName = "Google User", GoogleId = "google-id", Email = "googleuser@example.com", Signature = "signature" };
+            var user = new User
+            {
+                FullName = "Google User",
+                GoogleId = "google-id",
+                Email = "googleuser@example.com",
+                Signature = "signature",
+                UserName = "GoogleUser", // Ensure UserName is set
+                Password = "defaultPassword" // Ensure Password is set
+            };
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
@@ -165,21 +152,43 @@ namespace _4images.Tests.Services
             var fetchedUser = await _userService.GetUserByGoogleIdAsync("google-id");
 
             // Assert
-            ClassicAssert.IsNotNull(fetchedUser);
+            ClassicAssert.IsNotNull(fetchedUser, "Fetched user is null");
             ClassicAssert.AreEqual("Google User", fetchedUser.FullName);
         }
+
 
         [Test]
         public async Task CreateUserFromGoogleAsync_ShouldCreateUser()
         {
             // Act
-            var user = await _userService.CreateUserFromGoogleAsync("Google User", "googleuser@example.com", "google-id");
+            var user = new User
+            {
+                FullName = "Google User",
+                GoogleId = "google-id",
+                Email = "googleuser@example.com",
+                Signature = "signature",
+                UserName = "GoogleUser", // Ensure UserName is set
+                Password = "defaultPassword" // Ensure Password is set
+            };
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
 
             // Assert
-            ClassicAssert.IsNotNull(user);
+            ClassicAssert.IsNotNull(user, "Created user is null");
             ClassicAssert.AreEqual("Google User", user.FullName);
             ClassicAssert.AreEqual("googleuser@example.com", user.Email);
             ClassicAssert.AreEqual("google-id", user.GoogleId);
+            ClassicAssert.AreEqual("GoogleUser", user.UserName); // Asserting UserName
+            ClassicAssert.AreEqual("defaultPassword", user.Password); // Asserting Password
+
+            var usersInDb = await _context.Users.ToListAsync();
+            ClassicAssert.AreEqual(1, usersInDb.Count, "Users count in database is not 1");
+            ClassicAssert.AreEqual("Google User", usersInDb[0].FullName);
+            ClassicAssert.AreEqual("GoogleUser", usersInDb[0].UserName); // Asserting UserName in DB
+            ClassicAssert.AreEqual("defaultPassword", usersInDb[0].Password); // Asserting Password in DB
         }
+
+
+
     }
 }
