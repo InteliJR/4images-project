@@ -1,8 +1,6 @@
 using _4images.Models;
 using _4images.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace _4images.Controllers
 {

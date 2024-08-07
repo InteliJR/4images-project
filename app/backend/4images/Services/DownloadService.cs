@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using _4images.Data;
+﻿using _4images.Data;
 using _4images.Models;
 using Microsoft.EntityFrameworkCore;
 
