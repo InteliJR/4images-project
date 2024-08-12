@@ -2,12 +2,6 @@
 
 namespace _4images.Models
 {
-    public enum SignatureType
-    {
-        cooper,
-        silver,
-        gold
-    }
     public class User
     {
         public int Id { get; set; }
@@ -26,7 +20,7 @@ namespace _4images.Models
         public string Password { get; set; } // Hashed password
 
         [Required]
-        public SignatureType Signature { get; set; }
+        public String Signature { get; set; }
 
         public string? GoogleId { get; set; }
     }

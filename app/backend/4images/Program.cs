@@ -48,6 +48,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<TransactionService>();
 // LikeService
 builder.Services.AddScoped<LikeService>();
+// DownloadService
+builder.Services.AddScoped<DownloadService>();
 
 // google auth
 builder.Services.AddAuthentication(options =>

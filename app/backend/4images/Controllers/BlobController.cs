@@ -1,6 +1,5 @@
 ﻿using _4images.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace _4images.Controllers
 {

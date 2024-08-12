@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.EntityFrameworkCore;
 using _4images.Data;
 using _4images.Models;
@@ -134,7 +131,7 @@ namespace _4images.Services
                 FullName = fullName,
                 Email = email,
                 GoogleId = googleId,
-                Signature = SignatureType.cooper // default
+                Signature = "cooper" // default
             };
 
             _context.Users.Add(user);

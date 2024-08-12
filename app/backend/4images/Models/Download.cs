@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Security.Cryptography.Xml;
 
 namespace _4images.Models
 {
@@ -23,10 +22,5 @@ namespace _4images.Models
         [ForeignKey("TransactionFK")]
         public virtual Transaction Transaction { get; set; }
 
-        [Required]
-        public int SignatureFK { get; set; }
-
-        [ForeignKey("SignatureFK")]
-        public virtual Signature Signature { get; set; }
     }
 }

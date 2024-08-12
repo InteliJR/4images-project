@@ -17,7 +17,7 @@ namespace _4images.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -36,15 +36,44 @@ namespace _4images.Migrations
                     b.Property<int>("NumDownloads")
                         .HasColumnType("int");
 
-                    b.Property<int>("SignatureFK")
-                        .HasColumnType("int");
-
                     b.Property<int>("TransactionFK")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("FileFK");
+
+                    b.HasIndex("TransactionFK");
+
                     b.ToTable("Downloads");
+                });
+
+            modelBuilder.Entity("_4images.Models.FileMetadata", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("BlobUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("Size")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FileMetadata");
                 });
 
             modelBuilder.Entity("_4images.Models.Like", b =>
@@ -118,8 +147,9 @@ namespace _4images.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Signature")
-                        .HasColumnType("int");
+                    b.Property<string>("Signature")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -128,6 +158,25 @@ namespace _4images.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("_4images.Models.Download", b =>
+                {
+                    b.HasOne("_4images.Models.FileMetadata", "FileMetadata")
+                        .WithMany()
+                        .HasForeignKey("FileFK")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("_4images.Models.Transaction", "Transaction")
+                        .WithMany()
+                        .HasForeignKey("TransactionFK")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FileMetadata");
+
+                    b.Navigation("Transaction");
                 });
 #pragma warning restore 612, 618
         }

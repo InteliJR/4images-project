@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using _4images.Data;
+﻿using _4images.Data;
 using _4images.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,17 +15,15 @@ namespace _4images.Services
         public async Task<IEnumerable<Download>> GetAllDownloadsAsync()
         {
             return await _context.Downloads
-                .Include(d => d.FileFK)
-                .Include(d => d.TransactionFK)
-                .Include(d => d.SignatureFK)
+                .Include(d => d.FileMetadata)
+                .Include(d => d.Transaction)
                 .ToListAsync();
         }
         public async Task<Download> GetDownloadByIdAsync(int id)
         {
             return await _context.Downloads
-                .Include(d => d.FileFK)
-                .Include(d => d.TransactionFK)
-                .Include(d => d.SignatureFK)
+                .Include(d => d.FileMetadata)
+                .Include(d => d.Transaction)
                 .FirstOrDefaultAsync(d => d.Id == id);
         }
         public async Task<Download> CreateDownloadAsync(Download download)
