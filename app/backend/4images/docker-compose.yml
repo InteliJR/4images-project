@@ -1,0 +1,9 @@
+services:
+  app:
+    image: maurodaschagasjunior/image4images
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

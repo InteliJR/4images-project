@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,17 +8,18 @@ using _4images;
 using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
-var  MyAllowSpecificOrigins = "http://localhost:5173";
 
 // vari�veis de ambiente do .env
 Env.Load();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy  =>
+    options.AddPolicy("AllowAll",
+                      policy =>
                       {
-                          policy.WithOrigins("http://localhost:5173");
+                          policy.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
                       });
 });
 
@@ -98,9 +98,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
