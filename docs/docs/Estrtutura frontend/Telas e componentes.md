@@ -13,9 +13,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um ícone de perfil e a logo da empresa. Os links devem redirecionar o usuário para suas respectivas lojas. O ícone de usuário deve abrir um modal com as opções: Perfil e Sair (caso esteja cadastrado) ou Cadastro e Login (caso não esteja cadastrado). O ícone da empresa deve redirecionar para a Home Page. A barra de pesquisa é um componente separado.
 
-   <div style={{ width: '100%', maxWidth: '90%', margin: '0 auto' }}>
-      <img src='assets/NavBar.png' alt='NavBar' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![NavBar](assets/NavBar.png)
 
 
 ### 2. **Barra de Pesquisa**
@@ -25,9 +23,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de 'nenhum resultado encontrado'.
      - **Instruções:** O componente deve ser integrado com o backend para filtrar os resultados conforme o usuário digita. Deve receber o input como texto, fazer as requisições para o backend e retornar os resultados mais adequados ou informar que não há resultados.
 
-   <div style={{ width: '100%', maxWidth: '35%', margin: '0 auto' }}>
-      <img src='assets/BarradePesquisa.png' alt='Barra de Pesquisa' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Barra de Pesquisa](assets/BarradePesquisa.png)
 
 
 ### 3. **Footer**
@@ -37,10 +33,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O rodapé deve conter texto e um ícone do WhatsApp que redireciona o usuário para o WhatsApp do admin.
 
-   <div style={{ width: '100%', maxWidth: '90%', margin: '0 auto' }}>
-      <img src='assets/Footer.png' alt='Footer' style={{ width: '100%', height: 'auto' }} />
-   </div>
-
+   ![Footer](assets/Footer.png)
 
 ### 4. **Botão**
    - **Descrição:** Botão genérico reutilizável em diversas partes da aplicação.
@@ -49,10 +42,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve suportar diferentes funcionalidades (submit, redirecionar, etc.), estados (ativo, desativado, pressionado, hover) e estilos (personalizar tamanho, texto e cores).
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-   <img src='assets/Botao.png' alt='Botão' style={{ width: '100%', height: 'auto' }} />
-   </div>
-
+   ![Botão](assets/Botao.png)
 
 ### 5. **Filtro**
    - **Descrição:** Componente que permite ao usuário filtrar imagens por categorias, cores, etc.
@@ -61,9 +51,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Uma string (valor do filtro aplicado).
      - **Instruções:** O filtro deve funcionar de maneira semelhante a um botão. Ele deve ser estilizado de acordo com as personalizações e retornar uma string que será usada para filtrar os resultados posteriormente.
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-      <img src='assets/Filtro.png' alt='Filtro' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Filtro](assets/Filtro.png)
 
 
 ### 6. **Botão com Link**
@@ -73,9 +61,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve ter um efeito de hover e, ao ser clicado, redirecionar o usuário para a rota especificada.
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-     <img src='assets/BotaoLink.png' alt='Botão com Link' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Botão com Link](assets/BotaoLink.png)
+
 
 ### 7. **Texto Link**
    - **Descrição:** Links textuais que redirecionam o usuário para diferentes seções do site.
@@ -84,9 +71,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O link deve ser estilizado para se diferenciar de texto normal e ter estados de hover adequados.
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-     <img src='assets/TextoLink.png' alt='Texto Link' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Texto Link](assets/TextoLink.png)
+
 
 ### 8. **Filtros de Imagens**
    - **Descrição:** Filtros visuais aplicáveis às imagens exibidas (e.g., preto e branco, sépia).
@@ -95,9 +81,11 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Os filtros devem ter um efeito de hover, mas não precisam de interação; eles servem apenas para exemplificar o filtro aplicado à imagem atual.
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-     <img src='assets/FiltrosDeImagens.png' alt='Filtros de Imagens' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Filtros de Imagens](assets/FiltrosDeImagens.png)
+
+Aqui está o documento atualizado com as imagens convertidas para o formato Markdown e com tamanhos ajustados conforme especificado:
+
+## **Componentes**
 
 ### 9. **Inputs**
    - **Descrição:** Campos de entrada de texto, números e outros dados.
@@ -106,9 +94,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** O valor inserido pelo usuário.
      - **Instruções:** Os inputs devem ser estilizados de acordo com o design e incluir validações específicas para cada tipo.
 
-   <div style={{ width: '100%', maxWidth: '50%', margin: '0 auto' }}>
-     <img src='assets/Input.png' alt='Inputs' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Inputs](assets/Input.png)
 
 ### 10. **Esferas de Progresso**
    - **Descrição:** Indicadores circulares de progresso para mostrar o status de uma tarefa ou carregamento.
@@ -117,9 +103,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve ser animado e capaz de receber diferentes valores para indicar o progresso.
 
-   <div style={{ width: '100%', maxWidth: '10%', margin: '0 auto' }}>
-     <img src='assets/Progresso.png' alt='Esferas de Progresso' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Esferas de Progresso](assets/Progresso.png)
 
 ### 11. **Dropdown**
    - **Descrição:** Menu suspenso que exibe uma lista de opções ao ser clicado.
@@ -128,9 +112,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** A opção selecionada (string).
      - **Instruções:** O componente deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.
 
-   <div style={{ width: '100%', maxWidth: '60%', margin: '0 auto' }}>
-     <img src='assets/DropDown.png' alt='Dropdown' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Dropdown](assets/DropDown.png)
 
 ### 12. **Modal Genérico**
    - **Descrição:** Componente de janela modal reutilizável para diferentes contextos.
@@ -139,9 +121,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Implementar suporte para diversos tamanhos e tipos de conteúdo.
 
-   <div style={{ width: '100%', maxWidth: '20%', margin: '0 auto' }}>
-     <img src='assets/Modal.png' alt='Modal Genérico' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Modal Genérico](assets/Modal.png)
 
 ### 13. **Card Foto**
    - **Descrição:** Cartão que exibe uma foto com opções de descrição e download.
@@ -150,9 +130,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve haver suporte para visualização e download da imagem.
 
-   <div style={{ width: '100%', maxWidth: '30%', margin: '0 auto' }}>
-     <img src='assets/CardFoto.png' alt='Card Foto' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Card Foto](assets/CardFoto.png)
 
 ### 14. **Card Pedido**
    - **Descrição:** Cartão que exibe informações de um pedido realizado pelo usuário.
@@ -161,9 +139,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O cartão deve exibir informações de status e ter um link para mais detalhes.
 
-   <div style={{ width: '100%', maxWidth: '30%', margin: '0 auto' }}>
-     <img src='assets/CardPedido.png' alt='Card Pedido' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Card Pedido](assets/CardPedido.png)
 
 ### 15. **Card Plano**
    - **Descrição:** Cartão que exibe detalhes sobre um plano de assinatura.
@@ -172,9 +148,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve incluir opções para seleção do plano e exibir todos os benefícios de forma clara.
 
-   <div style={{ width: '100%', maxWidth: '30%', margin: '0 auto' }}>
-     <img src='assets/CardPlano.png' alt='Card Plano' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Card Plano](assets/CardPlano.png)
 
 ### 16. **Card Coleção**
    - **Descrição:** Cartão que exibe uma coleção de imagens com uma breve descrição.
@@ -183,9 +157,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve permitir que o usuário clique para ver mais detalhes sobre a coleção.
 
-   <div style={{ width: '100%', maxWidth: '30%', margin: '0 auto' }}>
-     <img src='assets/CardColeção.png' alt='Card Coleção' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Card Coleção](assets/CardColeção.png)
+
 ---
 
 ## **Modais**
@@ -197,9 +170,7 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve incluir um botão para fechar o modal, ser responsivo para diferentes tamanhos de tela, e permitir o download da imagem exibida.
 
-   <div style={{ width: '100%', maxWidth: '60%', margin: '0 auto' }}>
-     <img src='assets/ModalImagem.png' alt='Modal Imagem Selecionada' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Modal Imagem Selecionada](assets/ModalImagem.png)
 
 ### 2. **Modal Plano**
    - **Descrição:** Modal que exibe informações detalhadas sobre os planos de assinatura, permitindo a seleção e confirmação do plano.
@@ -208,11 +179,9 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Um objeto contendo as informações do plano selecionado quando o botão de confirmação for clicado.
      - **Instruções:** Deve incluir um botão de confirmação, ser responsivo, e suportar diferentes tipos de plano. O modal deve fechar automaticamente após a confirmação.
 
-   <div style={{ width: '100%', maxWidth: '90%', margin: '0 auto' }}>
-     <img src='assets/ModalAssinaturas.png' alt='Modal Plano' style={{ width: '100%', height: 'auto' }} />
-   </div>
+   ![Modal Plano](assets/ModalAssinaturas.png)
 
-   ---
+---
 
 ## **Telas**
 
