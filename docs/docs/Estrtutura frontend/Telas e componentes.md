@@ -7,67 +7,180 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
 ## **Componentes**
 
 ### 1. **NavBar**
-   - **Descrição:** Componente de navegação principal do site, presente em todas as páginas.
-   - **Desenvolvimento:** Deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um Ícone de perfil e a Logo da empresa.
+   - **Descrição:** Componente de navegação principal do site, presente em todas as páginas, exceto as de login e cadastro.
+   - **Desenvolvimento:** 
+     - **Entradas:** Nenhuma.
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O componente deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um ícone de perfil e a logo da empresa. Os links devem redirecionar o usuário para suas respectivas lojas. O ícone de usuário deve abrir um modal com as opções: Perfil e Sair (caso esteja cadastrado) ou Cadastro e Login (caso não esteja cadastrado). O ícone da empresa deve redirecionar para a Home Page. A barra de pesquisa é um componente separado.
+
+   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
+       <img src="assets/NavBar.png" alt="NavBar" style="width: 100%; height: auto;" />
+   </div>
 
 ### 2. **Barra de Pesquisa**
-   - **Descrição:** Campo de input para o usuário buscar por imagens ou coleções.
-   - **Desenvolvimento:** Integrar com o backend para filtrar resultados conforme o usuário digita.
+   - **Descrição:** Campo de input para o usuário buscar por imagens ou coleções, retornando resultados para a pesquisa.
+   - **Desenvolvimento:**
+     - **Entradas:** Uma string (texto digitado pelo usuário).
+     - **Saídas:** Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de "nenhum resultado encontrado".
+     - **Instruções:** O componente deve ser integrado com o backend para filtrar os resultados conforme o usuário digita. Deve receber o input como texto, fazer as requisições para o backend e retornar os resultados mais adequados ou informar que não há resultados.
+
+   <div style="width: 100%; max-width: 35%; margin: 0 auto;">
+       <img src="assets/BarradePesquisa.png" alt="Barra de Pesquisa" style="width: 100%; height: auto;" />
+   </div>
 
 ### 3. **Footer**
-   - **Descrição:** Rodapé do site, com links para páginas de termos de serviço, política de privacidade, redes sociais, etc.
-   - **Desenvolvimento:** Estático, mas deve ser responsivo.
+   - **Descrição:** Rodapé do site, com um texto que convida o usuário para um possível contato com o Admin.
+   - **Desenvolvimento:** 
+     - **Entradas:** Nenhuma.
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O rodapé deve conter texto e um ícone do WhatsApp que redireciona o usuário para o WhatsApp do admin.
+
+   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
+       <img src="assets/Footer.png" alt="Footer" style="width: 100%; height: auto;" />
+   </div>
 
 ### 4. **Botão**
    - **Descrição:** Botão genérico reutilizável em diversas partes da aplicação.
-   - **Desenvolvimento:** Deve suportar diferentes estados (ativo, desativado, pressionado) e estilos (personalizar tamanho, texto e cores).
+   - **Desenvolvimento:**
+     - **Entradas:** Uma string (texto do botão) e uma função (callback para a ação do botão).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O botão deve suportar diferentes funcionalidades (submit, redirecionar, etc.), estados (ativo, desativado, pressionado, hover) e estilos (personalizar tamanho, texto e cores).
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/Botao.png" alt="Botão" style="width: 100%; height: auto;" />
+   </div>
 
 ### 5. **Filtro**
-   - **Descrição:** Componentes que permitem ao usuário filtrar imagens por categorias, cores, etc.
-   - **Desenvolvimento:** Um componente semelhante ao botão que vai ter somente um nome, que permitirá o sistema de busca ser dinâmico.
+   - **Descrição:** Componente que permite ao usuário filtrar imagens por categorias, cores, etc.
+   - **Desenvolvimento:**
+     - **Entradas:** Uma string (nome do filtro).
+     - **Saídas:** Uma string (valor do filtro aplicado).
+     - **Instruções:** O filtro deve funcionar de maneira semelhante a um botão. Ele deve ser estilizado de acordo com as personalizações e retornar uma string que será usada para filtrar os resultados posteriormente.
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/Filtro.png" alt="Filtro" style="width: 100%; height: auto;" />
+   </div>
 
 ### 6. **Botão com Link**
-   - **Descrição:** Botão que está em um menu suspenso.
-   - **Desenvolvimento:** Ele possui hover.
+   - **Descrição:** Botão que faz parte do menu suspenso.
+   - **Desenvolvimento:** 
+     - **Entradas:** Uma string (texto do botão) e uma string (URL de redirecionamento).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O botão deve ter um efeito de hover e, ao ser clicado, redirecionar o usuário para a rota especificada.
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/BotaoLink.png" alt="Botão com Link" style="width: 100%; height: auto;" />
+   </div>
 
 ### 7. **Texto Link**
    - **Descrição:** Links textuais que redirecionam o usuário para diferentes seções do site.
-   - **Desenvolvimento:** Estilizar para diferenciar de texto normal e implementar estados de hover.
+   - **Desenvolvimento:** 
+     - **Entradas:** Uma string (texto do link) e uma string (URL de redirecionamento).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O link deve ser estilizado para se diferenciar de texto normal e ter estados de hover adequados.
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/TextoLink.png" alt="Texto Link" style="width: 100%; height: auto;" />
+   </div>
 
 ### 8. **Filtros de Imagens**
    - **Descrição:** Filtros visuais aplicáveis às imagens exibidas (e.g., preto e branco, sépia).
+   - **Desenvolvimento:**
+     - **Entradas:** Nenhuma.
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Os filtros devem ter um efeito de hover, mas não precisam de interação; eles servem apenas para exemplificar o filtro aplicado à imagem atual.
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/FiltrosDeImagens.png" alt="Filtros de Imagens" style="width: 100%; height: auto;" />
+   </div>
 
 ### 9. **Inputs**
-   - **Descrição:** Campos de entrada de texto, números, e outros dados.
-   - **Desenvolvimento:** Diferentes tipos de inputs (text, password, email) com estilos e validações específicas.
+   - **Descrição:** Campos de entrada de texto, números e outros dados.
+   - **Desenvolvimento:**
+     - **Entradas:** Variáveis de string, número ou outros tipos de dados, dependendo do tipo de input (text, password, email).
+     - **Saídas:** O valor inserido pelo usuário.
+     - **Instruções:** Os inputs devem ser estilizados de acordo com o design e incluir validações específicas para cada tipo.
+
+   <div style="width: 100%; max-width: 50%; margin: 0 auto;">
+       <img src="assets/Input.png" alt="Inputs" style="width: 100%; height: auto;" />
+   </div>
 
 ### 10. **Esferas de Progresso**
    - **Descrição:** Indicadores circulares de progresso para mostrar o status de uma tarefa ou carregamento.
-   - **Desenvolvimento:** Deve ser animado e capaz de receber diferentes valores para indicar o progresso.
+   - **Desenvolvimento:**
+     - **Entradas:** Um número (percentual de progresso).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O componente deve ser animado e capaz de receber diferentes valores para indicar o progresso.
+
+   <div style="width: 100%; max-width: 10%; margin: 0 auto;">
+       <img src="assets/Progresso.png" alt="Esferas de Progresso" style="width: 100%; height: auto;" />
+   </div>
 
 ### 11. **Dropdown**
    - **Descrição:** Menu suspenso que exibe uma lista de opções ao ser clicado.
-   - **Desenvolvimento:** Deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.
+   - **Desenvolvimento:**
+     - **Entradas:** Um array de strings (opções do dropdown).
+     - **Saídas:** A opção selecionada (string).
+     - **Instruções:** O componente deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.
+
+   <div style="width: 100%; max-width: 60%; margin: 0 auto;">
+       <img src="assets/DropDown.png" alt="Dropdown" style="width: 100%; height: auto;" />
+   </div>
 
 ### 12. **Modal Genérico**
    - **Descrição:** Componente de janela modal reutilizável para diferentes contextos.
-   - **Desenvolvimento:** Implementar com fundo escurecido e suporte para diversos tamanhos e tipos de conteúdo.
+   - **Desenvolvimento:**
+     - **Entradas:** Uma string (título do modal) e um array de objetos (conteúdo do modal).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Implementar suporte para diversos tamanhos e tipos de conteúdo.
+
+   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
+       <img src="assets/Modal.png" alt="Modal Genérico" style="width: 100%; height: auto;" />
+   </div>
 
 ### 13. **Card Foto**
    - **Descrição:** Cartão que exibe uma foto com opções de descrição e download.
-   - **Desenvolvimento:** Estilizar para que seja responsivo e incluíra botões para download e visualização de detalhes.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto contendo uma imagem e uma string (descrição).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Deve haver suporte para visualização e download da imagem.
+
+   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
+       <img src="assets/CardFoto.png" alt="Card Foto" style="width: 100%; height: auto;" />
+   </div>
 
 ### 14. **Card Pedido**
-   - **Descrição:** Cartão que exibe detalhes de um pedido realizado pelo usuário.
-   - **Desenvolvimento:** Incluir informações como data do pedido, status, e botão para detalhes.
+   - **Descrição:** Cartão que exibe informações de um pedido realizado pelo usuário.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto com os dados do pedido (ID, data, status, etc.).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** O cartão deve exibir informações de status e ter um link para mais detalhes.
+
+   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
+       <img src="assets/CardPedido.png" alt="Card Pedido" style="width: 100%; height: auto;" />
+   </div>
 
 ### 15. **Card Plano**
-   - **Descrição:** Cartão que exibe informações sobre os planos de assinatura.
-   - **Desenvolvimento:** Deve incluir detalhes como preço, benefícios e opção para selecionar o plano.
+   - **Descrição:** Cartão que exibe detalhes sobre um plano de assinatura.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto com detalhes do plano (nome, preço, benefícios).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Deve incluir opções para seleção do plano e exibir todos os benefícios de forma clara.
+
+   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
+       <img src="assets/CardPlano.png" alt="Card Plano" style="width: 100%; height: auto;" />
+   </div>
 
 ### 16. **Card Coleção**
-   - **Descrição:** Cartão que exibe uma coleção de imagens, com opção para visualização completa.
-   - **Desenvolvimento:** Deve ser clicável e exibir uma pré-visualização das imagens da coleção.
+   - **Descrição:** Cartão que exibe uma coleção de imagens com uma breve descrição.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto com informações da coleção (nome, número de itens, imagem).
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Deve permitir que o usuário clique para ver mais detalhes sobre a coleção.
+
+   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
+       <img src="assets/CardColeção.png" alt="Card Coleção" style="width: 100%; height: auto;" />
+   </div>
 
 ---
 
@@ -75,14 +188,25 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
 
 ### 1. **Modal Imagem Selecionada**
    - **Descrição:** Modal que exibe uma imagem selecionada, com opções de download e descrição.
-   - **Desenvolvimento:** Deve incluir um botão para fechar o modal e ser responsivo.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto contendo a URL da imagem, a descrição, e um booleano indicando se o modal deve estar aberto.
+     - **Saídas:** Nenhuma.
+     - **Instruções:** Deve incluir um botão para fechar o modal, ser responsivo para diferentes tamanhos de tela, e permitir o download da imagem exibida.
 
-### 2. **Modal Assinaturas**
-   - **Descrição:** Modal para assinaturas do usuário, com opções para assinar ou não.
+   <div style="width: 100%; max-width: 60%; margin: 0 auto;">
+       <img src="assets/ModalImagem.png" alt="Modal Imagem Selecionada" style="width: 100%; height: auto;" />
+   </div>
 
-### 3. **Modal Alterar Senha**
-   - **Descrição:** Modal que permite ao usuário alterar sua senha.
-   - **Desenvolvimento:** Deve incluir campos de input para a senha atual e nova senha, com validação.
+### 2. **Modal Plano**
+   - **Descrição:** Modal que exibe informações detalhadas sobre os planos de assinatura, permitindo a seleção e confirmação do plano.
+   - **Desenvolvimento:**
+     - **Entradas:** Um objeto contendo os detalhes do plano (nome, preço, benefícios), e um booleano indicando se o modal deve estar aberto.
+     - **Saídas:** Um objeto contendo as informações do plano selecionado quando o botão de confirmação for clicado.
+     - **Instruções:** Deve incluir um botão de confirmação, ser responsivo, e suportar diferentes tipos de plano. O modal deve fechar automaticamente após a confirmação.
+
+   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
+       <img src="assets/ModalAssinaturas.png" alt="Modal Plano" style="width: 100%; height: auto;" />
+   </div>
 
 ---
 
@@ -91,92 +215,117 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
 ### **Usuário**
 
 1. **Tela Inicial**
-   - **Descrição:** Página principal do usuário com acesso rápido a coleções, imagens recomendadas, e filtros.
+   **Descrição:** Página principal do usuário com acesso rápido a coleções, imagens recomendadas, e filtros.
+   ![Tela Inicial](assets/Usuário%20Tela%20Inicial.png)
 
 2. **Tela Perfil**
-   - **Descrição:** Exibe informações do perfil do usuário, como nome, email, e planos de assinatura.
+   **Descrição:** Exibe informações do perfil do usuário, como nome, email, e planos de assinatura.
+   ![Tela Perfil](assets/Usuário%20Tela%20Perfil.png)
 
 3. **Tela Editar Perfil**
-   - **Descrição:** Permite ao usuário editar suas informações pessoais, como nome, email e foto de perfil.
+   **Descrição:** Permite ao usuário editar suas informações pessoais, como nome, email e foto de perfil.
+   ![Tela Editar Perfil](assets/Usuário%20Tela%20Editar%20Perfil.png)
 
 4. **Tela Pagamentos**
-   - **Descrição:** Exibe histórico de pagamentos, detalhes de transações, e opções de métodos de pagamento.
+   **Descrição:** Exibe histórico de pagamentos, detalhes de transações, e opções de métodos de pagamento.
+   ![Tela Pagamentos](assets/Usuário%20Tela%20Pagamentos.png)
 
 5. **Tela Imagem Adquirida**
-   - **Descrição:** Mostra detalhes das imagens compradas pelo usuário, com opção para download.
+   **Descrição:** Mostra detalhes das imagens compradas pelo usuário, com opção para download.
+   ![Tela Imagem Adquirida](assets/Usuário%20Tela%20Imagem%20Adquirida.png)
 
 6. **Tela Pedidos**
-   - **Descrição:** Lista de pedidos realizados pelo usuário, com detalhes e status de cada um.
+   **Descrição:** Lista de pedidos realizados pelo usuário, com detalhes e status de cada um.
+   ![Tela Pedidos](assets/Usuário%20Tela%20Pedidos.png)
 
 7. **Tela Imagens Curtidas**
-   - **Descrição:** Exibe as imagens que o usuário marcou como curtidas, com opções para organizá-las ou adquirir.
+   **Descrição:** Exibe as imagens que o usuário marcou como curtidas, com opções para organizá-las ou adquirir.
+   ![Tela Imagens Curtidas](assets/Usuário%20Tela%20Imagens%20Curtidas.png)
 
 8. **Tela Coleções**
-   - **Descrição:** Página onde o usuário pode visualizar e gerenciar suas coleções de imagens.
+   **Descrição:** Página onde o usuário pode visualizar e gerenciar suas coleções de imagens.
+   ![Tela Coleções](assets/Usuário%20Tela%20Coleções.png)
 
 9. **Tela Dúvidas**
-   - **Descrição:** Página FAQ para ajudar o usuário com perguntas frequentes e suporte.
+   **Descrição:** Página FAQ para ajudar o usuário com perguntas frequentes e suporte.
+   ![Tela Dúvidas](assets/Usuário%20Tela%20Dúvidas.png)
 
 ### **Login**
 
 1. **Tela Cadastro Infos**
-   - **Descrição:** Página para o usuário cadastrar suas informações pessoais ao criar uma conta.
+   **Descrição:** Página para o usuário cadastrar suas informações pessoais ao criar uma conta.
+   ![Tela Cadastro Infos](assets/Login%20Tela%20Cadastro%20Infos.png)
 
 2. **Tela Cadastro Verificação**
-   - **Descrição:** Tela de verificação para confirmação do email ou telefone após o cadastro.
+   **Descrição:** Tela de verificação para confirmação do email ou telefone após o cadastro.
+   ![Tela Cadastro Verificação](assets/Login%20Tela%20Cadastro%20Verificação.png)
 
 3. **Tela Cadastro Assinatura**
-   - **Descrição:** Permite ao usuário escolher um plano de assinatura durante o cadastro.
+   **Descrição:** Permite ao usuário escolher um plano de assinatura durante o cadastro.
+   ![Tela Cadastro Assinatura](assets/Login%20Tela%20Cadastro%20Assinatura.png)
 
 4. **Tela Login**
-   - **Descrição:** Página para login do usuário, com campos para email e senha.
+   **Descrição:** Página para login do usuário, com campos para email e senha.
+   ![Tela Login](assets/Login%20Tela%20Login-1.png)
 
 5. **Tela Login Esqueceu a Senha**
-   - **Descrição:** Página para recuperação de senha, com envio de link de recuperação por email.
+   **Descrição:** Página para recuperação de senha, com envio de link de recuperação por email.
+   ![Tela Login Esqueceu a Senha](assets/Login%20Tela%20Login%20Esqueceu%20a%20Senha.png)
 
 ### **Admin**
 
 1. **Tela Inicial**
-   - **Descrição:** Dashboard inicial do administrador, com visão geral das atividades.
+   **Descrição:** Dashboard inicial do administrador, com visão geral das atividades.
+   ![Tela Inicial](assets/Admin%20Tela%20Inicial.png)
 
 2. **Tela Adicionar Fotos**
-   - **Descrição:** Interface para upload de novas imagens à plataforma, com categorização e tags.
+   **Descrição:** Interface para upload de novas imagens à plataforma, com categorização e tags.
+   ![Tela Adicionar Fotos](assets/Admin%20Tela%20Adicionar%20Fotos.png)
 
 3. **Tela Dashboard**
-   - **Descrição:** Exibe gráficos e estatísticas sobre o uso da plataforma e desempenho de vendas.
+   **Descrição:** Exibe gráficos e estatísticas sobre o uso da plataforma e desempenho de vendas.
+   ![Tela Dashboard](assets/Admin%20Tela%20Dashboard.png)
 
 4. **Tela Assinaturas**
-   - **Descrição:** Gerenciamento de planos de assinatura, com opções para editar ou criar novos planos.
+   **Descrição:** Gerenciamento de planos de assinatura, com opções para editar ou criar novos planos.
+   ![Tela Assinaturas](assets/Admin%20Tela%20Assinaturas.png)
 
 5. **Tela Criar Assinatura**
-   - **Descrição:** Interface específica para criação de novos planos de assinatura.
+   **Descrição:** Interface específica para criação de novos planos de assinatura.
+   ![Tela Criar Assinatura](assets/Admin%20Tela%20Criar%20Assinatura.png)
 
 6. **Tela Editar Assinatura**
-   - **Descrição:** Página para editar detalhes de um plano de assinatura existente.
+   **Descrição:** Página para editar detalhes de um plano de assinatura existente.
+   ![Tela Editar Assinatura](assets/Admin%20Tela%20Editar%20Assinatura.png)
 
 7. **Tela Relatório de Vendas**
-   - **Descrição:** Exibe relatórios detalhados sobre as vendas realizadas na plataforma.
+   **Descrição:** Exibe relatórios detalhados sobre as vendas realizadas na plataforma.
+   ![Tela Relatório de Vendas](assets/Admin%20Tela%20Relatório%20de%20Vendas.png)
 
 8. **Tela Coleções**
-   - **Descrição:** Gerenciamento de coleções de imagens, com opções para criar ou editar coleções.
+   **Descrição:** Gerenciamento de coleções de imagens, com opções para criar ou editar coleções.
+   ![Tela Coleções](assets/Admin%20Tela%20Coleções.png)
 
 9. **Tela Criar Coleções**
-   - **Descrição:** Interface para criar uma nova coleção de imagens.
+   **Descrição:** Interface para criar uma nova coleção de imagens.
+   ![Tela Criar Coleções](assets/Admin%20Tela%20Criar%20Coleções.png)
 
 10. **Tela Criar Coleção (a partir de seleção do feed)**
-    - **Descrição:** Permite ao administrador criar uma coleção selecionando imagens diretamente do feed.
+    **Descrição:** Permite ao administrador criar uma coleção selecionando imagens diretamente do feed.
+    ![Tela Criar Coleção (a partir de seleção do feed)](assets/Admin%20Tela%20Criar%20Coleção%20(a%20partir%20de%20seleção%20do%20feed).png)
 
 11. **Tela Coleção Selecionada**
-    - **Descrição:** Detalhes de uma coleção específica, com opções para editar ou adicionar imagens.
+    **Descrição:** Detalhes de uma coleção específica, com opções para editar ou adicionar imagens.
+    ![Tela Coleção Selecionada](assets/Admin%20Tela%20Coleção%20Selecionada.png)
 
 12. **Tela Adicionar Imagens à Coleção (a partir da coleção)**
-    - **Descrição:** Interface para adicionar novas imagens a uma coleção existente.
+    **Descrição:** Interface para adicionar novas imagens a uma coleção existente.
+    ![Tela Adicionar Imagens à Coleção (a partir da coleção)](assets/Admin%20Tela%20Adicionar%20Imagens%20à%20Coleção%20(a%20partir%20da%20coleção).png)
 
 13. **Tela Adicionar Imagens à Coleções (a partir do feed)**
-    - **Descrição:** Similar à anterior, mas permite adicionar imagens a várias coleções a partir do feed.
+    **Descrição:** Similar à anterior, mas permite adicionar imagens a várias coleções a partir do feed.
+    ![Tela Adicionar Imagens à Coleções (a partir do feed)](assets/Admin%20Tela%20Adicionar%20Imagens%20à%20Coleções%20(a%20partir%20do%20feed).png)
 
-14. **Tela Dúvidas**
-   - **Descrição:** Página de perguntas frequentes para o administrador.
 
 ---
 
