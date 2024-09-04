@@ -13,19 +13,19 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um ícone de perfil e a logo da empresa. Os links devem redirecionar o usuário para suas respectivas lojas. O ícone de usuário deve abrir um modal com as opções: Perfil e Sair (caso esteja cadastrado) ou Cadastro e Login (caso não esteja cadastrado). O ícone da empresa deve redirecionar para a Home Page. A barra de pesquisa é um componente separado.
 
-   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
-       <img src="assets/NavBar.png" alt="NavBar" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 90%; margin: 0 auto;'>
+       <img src='assets/NavBar.png' alt='NavBar' style='width: 100%; height: auto;' />
    </div>
 
 ### 2. **Barra de Pesquisa**
    - **Descrição:** Campo de input para o usuário buscar por imagens ou coleções, retornando resultados para a pesquisa.
    - **Desenvolvimento:**
      - **Entradas:** Uma string (texto digitado pelo usuário).
-     - **Saídas:** Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de "nenhum resultado encontrado".
+     - **Saídas:** Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de 'nenhum resultado encontrado'.
      - **Instruções:** O componente deve ser integrado com o backend para filtrar os resultados conforme o usuário digita. Deve receber o input como texto, fazer as requisições para o backend e retornar os resultados mais adequados ou informar que não há resultados.
 
-   <div style="width: 100%; max-width: 35%; margin: 0 auto;">
-       <img src="assets/BarradePesquisa.png" alt="Barra de Pesquisa" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 35%; margin: 0 auto;'>
+       <img src='assets/BarradePesquisa.png' alt='Barra de Pesquisa' style='width: 100%; height: auto;' />
    </div>
 
 ### 3. **Footer**
@@ -35,8 +35,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O rodapé deve conter texto e um ícone do WhatsApp que redireciona o usuário para o WhatsApp do admin.
 
-   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
-       <img src="assets/Footer.png" alt="Footer" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 90%; margin: 0 auto;'>
+       <img src='assets/Footer.png' alt='Footer' style='width: 100%; height: auto;' />
    </div>
 
 ### 4. **Botão**
@@ -46,8 +46,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve suportar diferentes funcionalidades (submit, redirecionar, etc.), estados (ativo, desativado, pressionado, hover) e estilos (personalizar tamanho, texto e cores).
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/Botao.png" alt="Botão" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/Botao.png' alt='Botão' style='width: 100%; height: auto;' />
    </div>
 
 ### 5. **Filtro**
@@ -57,8 +57,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Uma string (valor do filtro aplicado).
      - **Instruções:** O filtro deve funcionar de maneira semelhante a um botão. Ele deve ser estilizado de acordo com as personalizações e retornar uma string que será usada para filtrar os resultados posteriormente.
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/Filtro.png" alt="Filtro" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/Filtro.png' alt='Filtro' style='width: 100%; height: auto;' />
    </div>
 
 ### 6. **Botão com Link**
@@ -68,8 +68,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve ter um efeito de hover e, ao ser clicado, redirecionar o usuário para a rota especificada.
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/BotaoLink.png" alt="Botão com Link" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/BotaoLink.png' alt='Botão com Link' style='width: 100%; height: auto;' />
    </div>
 
 ### 7. **Texto Link**
@@ -79,8 +79,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O link deve ser estilizado para se diferenciar de texto normal e ter estados de hover adequados.
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/TextoLink.png" alt="Texto Link" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/TextoLink.png' alt='Texto Link' style='width: 100%; height: auto;' />
    </div>
 
 ### 8. **Filtros de Imagens**
@@ -90,8 +90,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Os filtros devem ter um efeito de hover, mas não precisam de interação; eles servem apenas para exemplificar o filtro aplicado à imagem atual.
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/FiltrosDeImagens.png" alt="Filtros de Imagens" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/FiltrosDeImagens.png' alt='Filtros de Imagens' style='width: 100%; height: auto;' />
    </div>
 
 ### 9. **Inputs**
@@ -101,8 +101,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** O valor inserido pelo usuário.
      - **Instruções:** Os inputs devem ser estilizados de acordo com o design e incluir validações específicas para cada tipo.
 
-   <div style="width: 100%; max-width: 50%; margin: 0 auto;">
-       <img src="assets/Input.png" alt="Inputs" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 50%; margin: 0 auto;'>
+       <img src='assets/Input.png' alt='Inputs' style='width: 100%; height: auto;' />
    </div>
 
 ### 10. **Esferas de Progresso**
@@ -112,8 +112,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve ser animado e capaz de receber diferentes valores para indicar o progresso.
 
-   <div style="width: 100%; max-width: 10%; margin: 0 auto;">
-       <img src="assets/Progresso.png" alt="Esferas de Progresso" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 10%; margin: 0 auto;'>
+       <img src='assets/Progresso.png' alt='Esferas de Progresso' style='width: 100%; height: auto;' />
    </div>
 
 ### 11. **Dropdown**
@@ -123,8 +123,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** A opção selecionada (string).
      - **Instruções:** O componente deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.
 
-   <div style="width: 100%; max-width: 60%; margin: 0 auto;">
-       <img src="assets/DropDown.png" alt="Dropdown" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 60%; margin: 0 auto;'>
+       <img src='assets/DropDown.png' alt='Dropdown' style='width: 100%; height: auto;' />
    </div>
 
 ### 12. **Modal Genérico**
@@ -134,8 +134,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Implementar suporte para diversos tamanhos e tipos de conteúdo.
 
-   <div style="width: 100%; max-width: 20%; margin: 0 auto;">
-       <img src="assets/Modal.png" alt="Modal Genérico" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 20%; margin: 0 auto;'>
+       <img src='assets/Modal.png' alt='Modal Genérico' style='width: 100%; height: auto;' />
    </div>
 
 ### 13. **Card Foto**
@@ -145,8 +145,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve haver suporte para visualização e download da imagem.
 
-   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
-       <img src="assets/CardFoto.png" alt="Card Foto" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 30%; margin: 0 auto;'>
+       <img src='assets/CardFoto.png' alt='Card Foto' style='width: 100%; height: auto;' />
    </div>
 
 ### 14. **Card Pedido**
@@ -156,8 +156,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O cartão deve exibir informações de status e ter um link para mais detalhes.
 
-   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
-       <img src="assets/CardPedido.png" alt="Card Pedido" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 30%; margin: 0 auto;'>
+       <img src='assets/CardPedido.png' alt='Card Pedido' style='width: 100%; height: auto;' />
    </div>
 
 ### 15. **Card Plano**
@@ -167,8 +167,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve incluir opções para seleção do plano e exibir todos os benefícios de forma clara.
 
-   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
-       <img src="assets/CardPlano.png" alt="Card Plano" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 30%; margin: 0 auto;'>
+       <img src='assets/CardPlano.png' alt='Card Plano' style='width: 100%; height: auto;' />
    </div>
 
 ### 16. **Card Coleção**
@@ -178,8 +178,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve permitir que o usuário clique para ver mais detalhes sobre a coleção.
 
-   <div style="width: 100%; max-width: 30%; margin: 0 auto;">
-       <img src="assets/CardColeção.png" alt="Card Coleção" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 30%; margin: 0 auto;'>
+       <img src='assets/CardColeção.png' alt='Card Coleção' style='width: 100%; height: auto;' />
    </div>
 
 ---
@@ -193,8 +193,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve incluir um botão para fechar o modal, ser responsivo para diferentes tamanhos de tela, e permitir o download da imagem exibida.
 
-   <div style="width: 100%; max-width: 60%; margin: 0 auto;">
-       <img src="assets/ModalImagem.png" alt="Modal Imagem Selecionada" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 60%; margin: 0 auto;'>
+       <img src='assets/ModalImagem.png' alt='Modal Imagem Selecionada' style='width: 100%; height: auto;' />
    </div>
 
 ### 2. **Modal Plano**
@@ -204,8 +204,8 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Um objeto contendo as informações do plano selecionado quando o botão de confirmação for clicado.
      - **Instruções:** Deve incluir um botão de confirmação, ser responsivo, e suportar diferentes tipos de plano. O modal deve fechar automaticamente após a confirmação.
 
-   <div style="width: 100%; max-width: 90%; margin: 0 auto;">
-       <img src="assets/ModalAssinaturas.png" alt="Modal Plano" style="width: 100%; height: auto;" />
+   <div style='width: 100%; max-width: 90%; margin: 0 auto;'>
+       <img src='assets/ModalAssinaturas.png' alt='Modal Plano' style='width: 100%; height: auto;' />
    </div>
 
 ---

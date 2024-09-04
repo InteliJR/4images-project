@@ -16,9 +16,10 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    defaultLocale: 'en', // Altere para um idioma diferente do pt-BR
+    locales: ['en'], // Exclua 'pt-BR' temporariamente
   },
+  
 
   presets: [
     [
