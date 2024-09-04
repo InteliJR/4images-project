@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Estrtutura frontend/Telas e componentes" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">Telas e componentes | Documentação</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://intelijr.github.io/4images-project/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://intelijr.github.io/4images-project/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://intelijr.github.io/4images-project/docs/Estrtutura frontend/Telas e componentes"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Telas e componentes | Documentação"><meta data-rh="true" name="description" content="Documento de Desenvolvimento de Componentes e Telas"><meta data-rh="true" property="og:description" content="Documento de Desenvolvimento de Componentes e Telas"><link data-rh="true" rel="canonical" href="https://intelijr.github.io/4images-project/docs/Estrtutura frontend/Telas e componentes"><link data-rh="true" rel="alternate" href="https://intelijr.github.io/4images-project/docs/Estrtutura frontend/Telas e componentes" hreflang="en"><link data-rh="true" rel="alternate" href="https://intelijr.github.io/4images-project/docs/Estrtutura frontend/Telas e componentes" hreflang="x-default"><link rel="stylesheet" href="/4images-project/assets/css/styles.116b500d.css">
+<script src="/4images-project/assets/js/runtime~main.8a70f382.js" defer="defer"></script>
+<script src="/4images-project/assets/js/main.0d35ed30.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/4images-project/"><div class="navbar__logo"><img src="/4images-project/img/logo.svg" alt="LogoDocs" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/4images-project/img/logo.svg" alt="LogoDocs" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Início</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/4images-project/docs/Arquitetura IT/">Documentação</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/InteliJR/4images-project" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/4images-project/docs/Arquitetura IT/">Arquitetura IT</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/4images-project/docs/Azure Blob Storage/">Azure Blob Storage</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/4images-project/docs/Elicitação de Requisitos/Requisitos Funcionais">Elicitação de Requisitos</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/4images-project/docs/Estrtutura frontend/Telas e componentes">Estrtutura frontend</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/4images-project/docs/Estrtutura frontend/Telas e componentes">Telas e componentes</a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/4images-project/docs/Modelagem do Banco de Dados/">Modelagem do Banco de Dados</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/4images-project/docs/Segurança e autenticação/OWASP">Segurança e autenticação</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/4images-project/docs/Tecnologias/Azure">Tecnologias</a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/4images-project/docs/intro">Entendimento do Problema</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/4images-project/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Estrtutura frontend</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Telas e componentes</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Telas e componentes</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="documento-de-desenvolvimento-de-componentes-e-telas">Documento de Desenvolvimento de Componentes e Telas<a href="#documento-de-desenvolvimento-de-componentes-e-telas" class="hash-link" aria-label="Direct link to Documento de Desenvolvimento de Componentes e Telas" title="Direct link to Documento de Desenvolvimento de Componentes e Telas">​</a></h2>
+<p>Este documento serve como um guia para o desenvolvimento de componentes e telas do projeto em React utilizando Styled Components. Abaixo, cada componente e tela é detalhado com sua descrição e orientações para desenvolvimento. No final, é apresentada a estrutura de pastas a ser seguida.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="componentes"><strong>Componentes</strong><a href="#componentes" class="hash-link" aria-label="Direct link to componentes" title="Direct link to componentes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-navbar">1. <strong>NavBar</strong><a href="#1-navbar" class="hash-link" aria-label="Direct link to 1-navbar" title="Direct link to 1-navbar">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Componente de navegação principal do site, presente em todas as páginas, exceto as de login e cadastro.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Nenhuma.</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O componente deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um ícone de perfil e a logo da empresa. Os links devem redirecionar o usuário para suas respectivas lojas. O ícone de usuário deve abrir um modal com as opções: Perfil e Sair (caso esteja cadastrado) ou Cadastro e Login (caso não esteja cadastrado). O ícone da empresa deve redirecionar para a Home Page. A barra de pesquisa é um componente separado.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:90%;margin:0 auto"><img src="assets/NavBar.png" alt="NavBar" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-barra-de-pesquisa">2. <strong>Barra de Pesquisa</strong><a href="#2-barra-de-pesquisa" class="hash-link" aria-label="Direct link to 2-barra-de-pesquisa" title="Direct link to 2-barra-de-pesquisa">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Campo de input para o usuário buscar por imagens ou coleções, retornando resultados para a pesquisa.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (texto digitado pelo usuário).</li>
+<li><strong>Saídas:</strong> Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de &#x27;nenhum resultado encontrado&#x27;.</li>
+<li><strong>Instruções:</strong> O componente deve ser integrado com o backend para filtrar os resultados conforme o usuário digita. Deve receber o input como texto, fazer as requisições para o backend e retornar os resultados mais adequados ou informar que não há resultados.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:35%;margin:0 auto"><img src="assets/BarradePesquisa.png" alt="Barra de Pesquisa" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-footer">3. <strong>Footer</strong><a href="#3-footer" class="hash-link" aria-label="Direct link to 3-footer" title="Direct link to 3-footer">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Rodapé do site, com um texto que convida o usuário para um possível contato com o Admin.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Nenhuma.</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O rodapé deve conter texto e um ícone do WhatsApp que redireciona o usuário para o WhatsApp do admin.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:90%;margin:0 auto"><img src="assets/Footer.png" alt="Footer" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-botão">4. <strong>Botão</strong><a href="#4-botão" class="hash-link" aria-label="Direct link to 4-botão" title="Direct link to 4-botão">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Botão genérico reutilizável em diversas partes da aplicação.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (texto do botão) e uma função (callback para a ação do botão).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O botão deve suportar diferentes funcionalidades (submit, redirecionar, etc.), estados (ativo, desativado, pressionado, hover) e estilos (personalizar tamanho, texto e cores).</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/Botao.png" alt="Botão" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-filtro">5. <strong>Filtro</strong><a href="#5-filtro" class="hash-link" aria-label="Direct link to 5-filtro" title="Direct link to 5-filtro">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Componente que permite ao usuário filtrar imagens por categorias, cores, etc.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (nome do filtro).</li>
+<li><strong>Saídas:</strong> Uma string (valor do filtro aplicado).</li>
+<li><strong>Instruções:</strong> O filtro deve funcionar de maneira semelhante a um botão. Ele deve ser estilizado de acordo com as personalizações e retornar uma string que será usada para filtrar os resultados posteriormente.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/Filtro.png" alt="Filtro" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-botão-com-link">6. <strong>Botão com Link</strong><a href="#6-botão-com-link" class="hash-link" aria-label="Direct link to 6-botão-com-link" title="Direct link to 6-botão-com-link">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Botão que faz parte do menu suspenso.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (texto do botão) e uma string (URL de redirecionamento).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O botão deve ter um efeito de hover e, ao ser clicado, redirecionar o usuário para a rota especificada.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/BotaoLink.png" alt="Botão com Link" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="7-texto-link">7. <strong>Texto Link</strong><a href="#7-texto-link" class="hash-link" aria-label="Direct link to 7-texto-link" title="Direct link to 7-texto-link">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Links textuais que redirecionam o usuário para diferentes seções do site.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (texto do link) e uma string (URL de redirecionamento).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O link deve ser estilizado para se diferenciar de texto normal e ter estados de hover adequados.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/TextoLink.png" alt="Texto Link" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="8-filtros-de-imagens">8. <strong>Filtros de Imagens</strong><a href="#8-filtros-de-imagens" class="hash-link" aria-label="Direct link to 8-filtros-de-imagens" title="Direct link to 8-filtros-de-imagens">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Filtros visuais aplicáveis às imagens exibidas (e.g., preto e branco, sépia).</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Nenhuma.</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Os filtros devem ter um efeito de hover, mas não precisam de interação; eles servem apenas para exemplificar o filtro aplicado à imagem atual.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/FiltrosDeImagens.png" alt="Filtros de Imagens" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="9-inputs">9. <strong>Inputs</strong><a href="#9-inputs" class="hash-link" aria-label="Direct link to 9-inputs" title="Direct link to 9-inputs">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Campos de entrada de texto, números e outros dados.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Variáveis de string, número ou outros tipos de dados, dependendo do tipo de input (text, password, email).</li>
+<li><strong>Saídas:</strong> O valor inserido pelo usuário.</li>
+<li><strong>Instruções:</strong> Os inputs devem ser estilizados de acordo com o design e incluir validações específicas para cada tipo.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:50%;margin:0 auto"><img src="assets/Input.png" alt="Inputs" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="10-esferas-de-progresso">10. <strong>Esferas de Progresso</strong><a href="#10-esferas-de-progresso" class="hash-link" aria-label="Direct link to 10-esferas-de-progresso" title="Direct link to 10-esferas-de-progresso">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Indicadores circulares de progresso para mostrar o status de uma tarefa ou carregamento.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um número (percentual de progresso).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O componente deve ser animado e capaz de receber diferentes valores para indicar o progresso.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:10%;margin:0 auto"><img src="assets/Progresso.png" alt="Esferas de Progresso" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="11-dropdown">11. <strong>Dropdown</strong><a href="#11-dropdown" class="hash-link" aria-label="Direct link to 11-dropdown" title="Direct link to 11-dropdown">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Menu suspenso que exibe uma lista de opções ao ser clicado.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um array de strings (opções do dropdown).</li>
+<li><strong>Saídas:</strong> A opção selecionada (string).</li>
+<li><strong>Instruções:</strong> O componente deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:60%;margin:0 auto"><img src="assets/DropDown.png" alt="Dropdown" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="12-modal-genérico">12. <strong>Modal Genérico</strong><a href="#12-modal-genérico" class="hash-link" aria-label="Direct link to 12-modal-genérico" title="Direct link to 12-modal-genérico">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Componente de janela modal reutilizável para diferentes contextos.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Uma string (título do modal) e um array de objetos (conteúdo do modal).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Implementar suporte para diversos tamanhos e tipos de conteúdo.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:20%;margin:0 auto"><img src="assets/Modal.png" alt="Modal Genérico" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="13-card-foto">13. <strong>Card Foto</strong><a href="#13-card-foto" class="hash-link" aria-label="Direct link to 13-card-foto" title="Direct link to 13-card-foto">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Cartão que exibe uma foto com opções de descrição e download.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto contendo uma imagem e uma string (descrição).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Deve haver suporte para visualização e download da imagem.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:30%;margin:0 auto"><img src="assets/CardFoto.png" alt="Card Foto" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="14-card-pedido">14. <strong>Card Pedido</strong><a href="#14-card-pedido" class="hash-link" aria-label="Direct link to 14-card-pedido" title="Direct link to 14-card-pedido">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Cartão que exibe informações de um pedido realizado pelo usuário.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto com os dados do pedido (ID, data, status, etc.).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> O cartão deve exibir informações de status e ter um link para mais detalhes.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:30%;margin:0 auto"><img src="assets/CardPedido.png" alt="Card Pedido" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="15-card-plano">15. <strong>Card Plano</strong><a href="#15-card-plano" class="hash-link" aria-label="Direct link to 15-card-plano" title="Direct link to 15-card-plano">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Cartão que exibe detalhes sobre um plano de assinatura.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto com detalhes do plano (nome, preço, benefícios).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Deve incluir opções para seleção do plano e exibir todos os benefícios de forma clara.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:30%;margin:0 auto"><img src="assets/CardPlano.png" alt="Card Plano" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="16-card-coleção">16. <strong>Card Coleção</strong><a href="#16-card-coleção" class="hash-link" aria-label="Direct link to 16-card-coleção" title="Direct link to 16-card-coleção">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Cartão que exibe uma coleção de imagens com uma breve descrição.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto com informações da coleção (nome, número de itens, imagem).</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Deve permitir que o usuário clique para ver mais detalhes sobre a coleção.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:30%;margin:0 auto"><img src="assets/CardColeção.png" alt="Card Coleção" style="width:100%;height:auto"></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="modais"><strong>Modais</strong><a href="#modais" class="hash-link" aria-label="Direct link to modais" title="Direct link to modais">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-modal-imagem-selecionada">1. <strong>Modal Imagem Selecionada</strong><a href="#1-modal-imagem-selecionada" class="hash-link" aria-label="Direct link to 1-modal-imagem-selecionada" title="Direct link to 1-modal-imagem-selecionada">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Modal que exibe uma imagem selecionada, com opções de download e descrição.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto contendo a URL da imagem, a descrição, e um booleano indicando se o modal deve estar aberto.</li>
+<li><strong>Saídas:</strong> Nenhuma.</li>
+<li><strong>Instruções:</strong> Deve incluir um botão para fechar o modal, ser responsivo para diferentes tamanhos de tela, e permitir o download da imagem exibida.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:60%;margin:0 auto"><img src="assets/ModalImagem.png" alt="Modal Imagem Selecionada" style="width:100%;height:auto"></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-modal-plano">2. <strong>Modal Plano</strong><a href="#2-modal-plano" class="hash-link" aria-label="Direct link to 2-modal-plano" title="Direct link to 2-modal-plano">​</a></h3>
+<ul>
+<li><strong>Descrição:</strong> Modal que exibe informações detalhadas sobre os planos de assinatura, permitindo a seleção e confirmação do plano.</li>
+<li><strong>Desenvolvimento:</strong>
+<ul>
+<li><strong>Entradas:</strong> Um objeto contendo os detalhes do plano (nome, preço, benefícios), e um booleano indicando se o modal deve estar aberto.</li>
+<li><strong>Saídas:</strong> Um objeto contendo as informações do plano selecionado quando o botão de confirmação for clicado.</li>
+<li><strong>Instruções:</strong> Deve incluir um botão de confirmação, ser responsivo, e suportar diferentes tipos de plano. O modal deve fechar automaticamente após a confirmação.</li>
+</ul>
+</li>
+</ul>
+<div style="width:100%;max-width:90%;margin:0 auto"><img src="assets/ModalAssinaturas.png" alt="Modal Plano" style="width:100%;height:auto"></div>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="telas"><strong>Telas</strong><a href="#telas" class="hash-link" aria-label="Direct link to telas" title="Direct link to telas">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="usuário"><strong>Usuário</strong><a href="#usuário" class="hash-link" aria-label="Direct link to usuário" title="Direct link to usuário">​</a></h3>
+<ol>
+<li>
+<p><strong>Tela Inicial</strong>
+<strong>Descrição:</strong> Página principal do usuário com acesso rápido a coleções, imagens recomendadas, e filtros.
+<img decoding="async" loading="lazy" alt="Tela Inicial" src="/4images-project/assets/images/Usuário Tela Inicial-d792f461e0949c88e3894a6da93aeed5.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Perfil</strong>
+<strong>Descrição:</strong> Exibe informações do perfil do usuário, como nome, email, e planos de assinatura.
+<img decoding="async" loading="lazy" alt="Tela Perfil" src="/4images-project/assets/images/Usuário Tela Perfil-6e113025995df7e42e175b0045cd221c.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Editar Perfil</strong>
+<strong>Descrição:</strong> Permite ao usuário editar suas informações pessoais, como nome, email e foto de perfil.
+<img decoding="async" loading="lazy" alt="Tela Editar Perfil" src="/4images-project/assets/images/Usuário Tela Editar Perfil-ebeff3b84ceae854fed3dfea2a01a3e7.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Pagamentos</strong>
+<strong>Descrição:</strong> Exibe histórico de pagamentos, detalhes de transações, e opções de métodos de pagamento.
+<img decoding="async" loading="lazy" alt="Tela Pagamentos" src="/4images-project/assets/images/Usuário Tela Pagamentos-7abbc2dc205c8787ee673e02b2d24b8f.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Imagem Adquirida</strong>
+<strong>Descrição:</strong> Mostra detalhes das imagens compradas pelo usuário, com opção para download.
+<img decoding="async" loading="lazy" alt="Tela Imagem Adquirida" src="/4images-project/assets/images/Usuário Tela Imagem Adquirida-4d63d42f3fcd6198790e91bbd819d683.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Pedidos</strong>
+<strong>Descrição:</strong> Lista de pedidos realizados pelo usuário, com detalhes e status de cada um.
+<img decoding="async" loading="lazy" alt="Tela Pedidos" src="/4images-project/assets/images/Usuário Tela Pedidos-4f91f5c9478fcd15a2da6a0d352596e7.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Imagens Curtidas</strong>
+<strong>Descrição:</strong> Exibe as imagens que o usuário marcou como curtidas, com opções para organizá-las ou adquirir.
+<img decoding="async" loading="lazy" alt="Tela Imagens Curtidas" src="/4images-project/assets/images/Usuário Tela Imagens Curtidas-582ca634b9aeec55c162451c8105b1f9.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Coleções</strong>
+<strong>Descrição:</strong> Página onde o usuário pode visualizar e gerenciar suas coleções de imagens.
+<img decoding="async" loading="lazy" alt="Tela Coleções" src="/4images-project/assets/images/Usuário Tela Coleções-9d16c86fbb25d76b7e185af577eef4fa.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Dúvidas</strong>
+<strong>Descrição:</strong> Página FAQ para ajudar o usuário com perguntas frequentes e suporte.
+<img decoding="async" loading="lazy" alt="Tela Dúvidas" src="/4images-project/assets/images/Usuário Tela Dúvidas-0c53e21c3a4ff39a76fb9ce76ee113a4.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="login"><strong>Login</strong><a href="#login" class="hash-link" aria-label="Direct link to login" title="Direct link to login">​</a></h3>
+<ol>
+<li>
+<p><strong>Tela Cadastro Infos</strong>
+<strong>Descrição:</strong> Página para o usuário cadastrar suas informações pessoais ao criar uma conta.
+<img decoding="async" loading="lazy" alt="Tela Cadastro Infos" src="/4images-project/assets/images/Login Tela Cadastro Infos-44a40a3b8193c8c1847ea00ebc2fe367.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Cadastro Verificação</strong>
+<strong>Descrição:</strong> Tela de verificação para confirmação do email ou telefone após o cadastro.
+<img decoding="async" loading="lazy" alt="Tela Cadastro Verificação" src="/4images-project/assets/images/Login Tela Cadastro Verificação-594dffacb8b44c0f64152c9d17e5c789.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Cadastro Assinatura</strong>
+<strong>Descrição:</strong> Permite ao usuário escolher um plano de assinatura durante o cadastro.
+<img decoding="async" loading="lazy" alt="Tela Cadastro Assinatura" src="/4images-project/assets/images/Login Tela Cadastro Assinatura-dbc9ec594170523d701aef113756c897.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Login</strong>
+<strong>Descrição:</strong> Página para login do usuário, com campos para email e senha.
+<img decoding="async" loading="lazy" alt="Tela Login" src="/4images-project/assets/images/Login Tela Login-1-e8e6d16190f778534456aece821eafd0.png" width="1928" height="1088" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Login Esqueceu a Senha</strong>
+<strong>Descrição:</strong> Página para recuperação de senha, com envio de link de recuperação por email.
+<img decoding="async" loading="lazy" alt="Tela Login Esqueceu a Senha" src="/4images-project/assets/images/Login Tela Login Esqueceu a Senha-57b827e968d6317b3390d4cf3d1858c9.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="admin"><strong>Admin</strong><a href="#admin" class="hash-link" aria-label="Direct link to admin" title="Direct link to admin">​</a></h3>
+<ol>
+<li>
+<p><strong>Tela Inicial</strong>
+<strong>Descrição:</strong> Dashboard inicial do administrador, com visão geral das atividades.
+<img decoding="async" loading="lazy" alt="Tela Inicial" src="/4images-project/assets/images/Admin Tela Inicial-834ee1a3b238c393a5813807168a6754.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Adicionar Fotos</strong>
+<strong>Descrição:</strong> Interface para upload de novas imagens à plataforma, com categorização e tags.
+<img decoding="async" loading="lazy" alt="Tela Adicionar Fotos" src="/4images-project/assets/images/Admin Tela Adicionar Fotos-d29c5ece28f5ae3a7074f3b59d93a0a2.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Dashboard</strong>
+<strong>Descrição:</strong> Exibe gráficos e estatísticas sobre o uso da plataforma e desempenho de vendas.
+<img decoding="async" loading="lazy" alt="Tela Dashboard" src="/4images-project/assets/images/Admin Tela Dashboard-6934d72383fcdc81e281f29074d58c31.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Assinaturas</strong>
+<strong>Descrição:</strong> Gerenciamento de planos de assinatura, com opções para editar ou criar novos planos.
+<img decoding="async" loading="lazy" alt="Tela Assinaturas" src="/4images-project/assets/images/Admin Tela Assinaturas-eeb245b0e6e6483de0914ec99fc221b8.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Criar Assinatura</strong>
+<strong>Descrição:</strong> Interface específica para criação de novos planos de assinatura.
+<img decoding="async" loading="lazy" alt="Tela Criar Assinatura" src="/4images-project/assets/images/Admin Tela Criar Assinatura-72f5ad8e0bab07377e76bf5e4cfbd711.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Editar Assinatura</strong>
+<strong>Descrição:</strong> Página para editar detalhes de um plano de assinatura existente.
+<img decoding="async" loading="lazy" alt="Tela Editar Assinatura" src="/4images-project/assets/images/Admin Tela Editar Assinatura-ca6ca90289753847d8bbea5c52d8a820.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Relatório de Vendas</strong>
+<strong>Descrição:</strong> Exibe relatórios detalhados sobre as vendas realizadas na plataforma.
+<img decoding="async" loading="lazy" alt="Tela Relatório de Vendas" src="/4images-project/assets/images/Admin Tela Relatório de Vendas-524ad102328423e4ac58a98c217a7593.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Coleções</strong>
+<strong>Descrição:</strong> Gerenciamento de coleções de imagens, com opções para criar ou editar coleções.
+<img decoding="async" loading="lazy" alt="Tela Coleções" src="/4images-project/assets/images/Admin Tela Coleções-e1c17cf88cb541a4b2e677ab8a0b17b9.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Criar Coleções</strong>
+<strong>Descrição:</strong> Interface para criar uma nova coleção de imagens.
+<img decoding="async" loading="lazy" alt="Tela Criar Coleções" src="/4images-project/assets/images/Admin Tela Criar Coleções-06a86864c077330ffdda1a976a0a7234.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Criar Coleção (a partir de seleção do feed)</strong>
+<strong>Descrição:</strong> Permite ao administrador criar uma coleção selecionando imagens diretamente do feed.
+<img decoding="async" loading="lazy" alt="Tela Criar Coleção (a partir de seleção do feed)" src="/4images-project/assets/images/Admin Tela Criar Coleção (a partir de seleção do feed)-cd1fa71a05d3b3a369536b98f9932c90.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Coleção Selecionada</strong>
+<strong>Descrição:</strong> Detalhes de uma coleção específica, com opções para editar ou adicionar imagens.
+<img decoding="async" loading="lazy" alt="Tela Coleção Selecionada" src="/4images-project/assets/images/Admin Tela Coleção Selecionada-77dce8bdbb0514e54a9b058450729ed1.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Adicionar Imagens à Coleção (a partir da coleção)</strong>
+<strong>Descrição:</strong> Interface para adicionar novas imagens a uma coleção existente.
+<img decoding="async" loading="lazy" alt="Tela Adicionar Imagens à Coleção (a partir da coleção)" src="/4images-project/assets/images/Admin Tela Adicionar Imagens à Coleção (a partir da coleção)-38fbb030b66d72953963fad935957794.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+<li>
+<p><strong>Tela Adicionar Imagens à Coleções (a partir do feed)</strong>
+<strong>Descrição:</strong> Similar à anterior, mas permite adicionar imagens a várias coleções a partir do feed.
+<img decoding="async" loading="lazy" alt="Tela Adicionar Imagens à Coleções (a partir do feed)" src="/4images-project/assets/images/Admin Tela Adicionar Imagens à Coleções (a partir do feed)-297eb048edf00ebee524804fdb17c910.png" width="1920" height="1080" class="img_ev3q"></p>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="estrutura-de-pastas"><strong>Estrutura de Pastas</strong><a href="#estrutura-de-pastas" class="hash-link" aria-label="Direct link to estrutura-de-pastas" title="Direct link to estrutura-de-pastas">​</a></h2>
+<p>A estrutura de pastas deve ser modular e organizada, facilitando a manutenção e desenvolvimento simultâneo por várias pessoas. Segue uma sugestão de estrutura:</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">src/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── assets/                     # Arquivos estáticos como imagens, fontes, etc.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── images/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── fonts/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── icons/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── components/                 # Componentes reutilizáveis</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── NavBar/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── NavBar.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── NavBar.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── NavBar.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Footer/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Footer.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Footer.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── Footer.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Button/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Button.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Button.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── Button.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Dropdown/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Dropdown.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Dropdown.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── Dropdown.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── SearchBar/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SearchBar.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SearchBar.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── SearchBar.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Filters/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Filters.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── Filters.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── Filters.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── ProgressCircles/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ProgressCircles.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ProgressCircles.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── ProgressCircles.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── ImageCard/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ImageCard.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ImageCard.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── ImageCard.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── OrderCard/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── OrderCard.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── OrderCard.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── OrderCard.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── PlanCard/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── PlanCard.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── PlanCard.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── PlanCard.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── CollectionCard/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── CollectionCard.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── CollectionCard.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── CollectionCard.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── TextLink/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── TextLink.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── TextLink.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── TextLink.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── InputField/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── InputField.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── InputField.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── InputField.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── LinkButton/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── LinkButton.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── LinkButton.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       └── LinkButton.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── modals/                     # Componentes de modal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── GenericModal/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── GenericModal.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── GenericModal.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── GenericModal.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── ImageModal/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ImageModal.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ImageModal.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── ImageModal.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── SubscriptionModal/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SubscriptionModal.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SubscriptionModal.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── SubscriptionModal.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── ChangePasswordModal/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── ChangePasswordModal.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── ChangePasswordModal.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       └── ChangePasswordModal.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── pages/                      # Páginas da aplicação</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── User/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── HomePage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── HomePage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── HomePage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── HomePage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ProfilePage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── ProfilePage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── ProfilePage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── ProfilePage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── EditProfilePage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── EditProfilePage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── EditProfilePage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── EditProfilePage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── PaymentsPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── PaymentsPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── PaymentsPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── PaymentsPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── AcquiredImagePage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── AcquiredImagePage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── AcquiredImagePage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── AcquiredImagePage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── OrdersPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── OrdersPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── OrdersPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── OrdersPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── LikedImagesPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── LikedImagesPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── LikedImagesPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── LikedImagesPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── CollectionsPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── CollectionsPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── CollectionsPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── CollectionsPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── FaqPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       ├── FaqPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       ├── FaqPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       └── FaqPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Login/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SignUpInfoPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SignUpInfoPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SignUpInfoPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── SignUpInfoPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SignUpVerificationPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SignUpVerificationPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SignUpVerificationPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── SignUpVerificationPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── SubscriptionSignUpPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SubscriptionSignUpPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── SubscriptionSignUpPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── SubscriptionSignUpPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── LoginPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── LoginPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   ├── LoginPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   │   └── LoginPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── ForgotPasswordPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       ├── ForgotPasswordPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       ├── ForgotPasswordPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │       └── ForgotPasswordPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── Admin/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── AdminHomePage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AdminHomePage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AdminHomePage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── AdminHomePage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── AddPhotosPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AddPhotosPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AddPhotosPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── AddPhotosPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── DashboardPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── DashboardPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── DashboardPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── DashboardPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── SubscriptionsPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SubscriptionsPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SubscriptionsPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── SubscriptionsPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── CreateSubscriptionPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CreateSubscriptionPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CreateSubscriptionPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── CreateSubscriptionPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── EditSubscriptionPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── EditSubscriptionPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── EditSubscriptionPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── EditSubscriptionPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── SalesReportPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SalesReportPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SalesReportPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── SalesReportPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── CollectionsPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CollectionsPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CollectionsPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── CollectionsPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── CreateCollectionPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CreateCollectionPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── CreateCollectionPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── CreateCollectionPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── SelectedCollectionPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SelectedCollectionPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── SelectedCollectionPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── SelectedCollectionPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       ├── AddImagesToCollectionPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AddImagesToCollectionPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   ├── AddImagesToCollectionPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       │   └── AddImagesToCollectionPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│       └── AddImagesToCollectionsFromFeedPage/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│           ├── AddImagesToCollectionsFromFeedPage.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│           ├── AddImagesToCollectionsFromFeedPage.styled.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│           └── AddImagesToCollectionsFromFeedPage.test.jsx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── utils/                      # Funções utilitárias e helpers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── formatDate.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── api.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── hooks/                      # Custom hooks</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── useFetch.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── useAuth.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── context/                    # Context API para gerenciamento de estado</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── AuthContext.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── CartContext.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── ThemeContext.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── services/                   # Serviços para chamadas de API</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── authService.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── userService.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── productService.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── adminService.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── styles/                     # Estilos globais e temas</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── GlobalStyle.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── theme.js</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── App.jsx                     # Componente principal da aplicação</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── index.js                    # Ponto de entrada da aplicação</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── setupTests.js               # Configuração para testes</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/InteliJR/4images-project/edit/main/website/docs/Estrtutura frontend/Telas e componentes.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/4images-project/docs/Elicitação de Requisitos/Requisitos Não Funcionais"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Requisitos Não Funcionais</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/4images-project/docs/Modelagem do Banco de Dados/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Modelagem do Banco de Dados</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#documento-de-desenvolvimento-de-componentes-e-telas" class="table-of-contents__link toc-highlight">Documento de Desenvolvimento de Componentes e Telas</a></li><li><a href="#componentes" class="table-of-contents__link toc-highlight"><strong>Componentes</strong></a><ul><li><a href="#1-navbar" class="table-of-contents__link toc-highlight">1. <strong>NavBar</strong></a></li><li><a href="#2-barra-de-pesquisa" class="table-of-contents__link toc-highlight">2. <strong>Barra de Pesquisa</strong></a></li><li><a href="#3-footer" class="table-of-contents__link toc-highlight">3. <strong>Footer</strong></a></li><li><a href="#4-botão" class="table-of-contents__link toc-highlight">4. <strong>Botão</strong></a></li><li><a href="#5-filtro" class="table-of-contents__link toc-highlight">5. <strong>Filtro</strong></a></li><li><a href="#6-botão-com-link" class="table-of-contents__link toc-highlight">6. <strong>Botão com Link</strong></a></li><li><a href="#7-texto-link" class="table-of-contents__link toc-highlight">7. <strong>Texto Link</strong></a></li><li><a href="#8-filtros-de-imagens" class="table-of-contents__link toc-highlight">8. <strong>Filtros de Imagens</strong></a></li><li><a href="#9-inputs" class="table-of-contents__link toc-highlight">9. <strong>Inputs</strong></a></li><li><a href="#10-esferas-de-progresso" class="table-of-contents__link toc-highlight">10. <strong>Esferas de Progresso</strong></a></li><li><a href="#11-dropdown" class="table-of-contents__link toc-highlight">11. <strong>Dropdown</strong></a></li><li><a href="#12-modal-genérico" class="table-of-contents__link toc-highlight">12. <strong>Modal Genérico</strong></a></li><li><a href="#13-card-foto" class="table-of-contents__link toc-highlight">13. <strong>Card Foto</strong></a></li><li><a href="#14-card-pedido" class="table-of-contents__link toc-highlight">14. <strong>Card Pedido</strong></a></li><li><a href="#15-card-plano" class="table-of-contents__link toc-highlight">15. <strong>Card Plano</strong></a></li><li><a href="#16-card-coleção" class="table-of-contents__link toc-highlight">16. <strong>Card Coleção</strong></a></li></ul></li><li><a href="#modais" class="table-of-contents__link toc-highlight"><strong>Modais</strong></a><ul><li><a href="#1-modal-imagem-selecionada" class="table-of-contents__link toc-highlight">1. <strong>Modal Imagem Selecionada</strong></a></li><li><a href="#2-modal-plano" class="table-of-contents__link toc-highlight">2. <strong>Modal Plano</strong></a></li></ul></li><li><a href="#telas" class="table-of-contents__link toc-highlight"><strong>Telas</strong></a><ul><li><a href="#usuário" class="table-of-contents__link toc-highlight"><strong>Usuário</strong></a></li><li><a href="#login" class="table-of-contents__link toc-highlight"><strong>Login</strong></a></li><li><a href="#admin" class="table-of-contents__link toc-highlight"><strong>Admin</strong></a></li></ul></li><li><a href="#estrutura-de-pastas" class="table-of-contents__link toc-highlight"><strong>Estrutura de Pastas</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/4images-project/docs/intro">Documentação</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/InteliJR/4images-project" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Inteli Júnior, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
