@@ -13,7 +13,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve incluir links para as principais seções do site (Início, Coleções, Curtidas e Transações), uma barra de pesquisa integrada, um ícone de perfil e a logo da empresa. Os links devem redirecionar o usuário para suas respectivas lojas. O ícone de usuário deve abrir um modal com as opções: Perfil e Sair (caso esteja cadastrado) ou Cadastro e Login (caso não esteja cadastrado). O ícone da empresa deve redirecionar para a Home Page. A barra de pesquisa é um componente separado.
 
-   ![NavBar](assets/NavBar.png)
 
 
 ### 2. **Barra de Pesquisa**
@@ -23,7 +22,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Resultados filtrados (array de objetos de imagens/coleções) ou uma mensagem de 'nenhum resultado encontrado'.
      - **Instruções:** O componente deve ser integrado com o backend para filtrar os resultados conforme o usuário digita. Deve receber o input como texto, fazer as requisições para o backend e retornar os resultados mais adequados ou informar que não há resultados.
 
-   ![Barra de Pesquisa](assets/BarradePesquisa.png)
 
 
 ### 3. **Footer**
@@ -33,7 +31,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O rodapé deve conter texto e um ícone do WhatsApp que redireciona o usuário para o WhatsApp do admin.
 
-   ![Footer](assets/Footer.png)
 
 ### 4. **Botão**
    - **Descrição:** Botão genérico reutilizável em diversas partes da aplicação.
@@ -42,7 +39,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve suportar diferentes funcionalidades (submit, redirecionar, etc.), estados (ativo, desativado, pressionado, hover) e estilos (personalizar tamanho, texto e cores).
 
-   ![Botão](assets/Botao.png)
 
 ### 5. **Filtro**
    - **Descrição:** Componente que permite ao usuário filtrar imagens por categorias, cores, etc.
@@ -51,7 +47,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Uma string (valor do filtro aplicado).
      - **Instruções:** O filtro deve funcionar de maneira semelhante a um botão. Ele deve ser estilizado de acordo com as personalizações e retornar uma string que será usada para filtrar os resultados posteriormente.
 
-   ![Filtro](assets/Filtro.png)
 
 
 ### 6. **Botão com Link**
@@ -61,7 +56,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O botão deve ter um efeito de hover e, ao ser clicado, redirecionar o usuário para a rota especificada.
 
-   ![Botão com Link](assets/BotaoLink.png)
 
 
 ### 7. **Texto Link**
@@ -71,7 +65,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** O link deve ser estilizado para se diferenciar de texto normal e ter estados de hover adequados.
 
-   ![Texto Link](assets/TextoLink.png)
 
 
 ### 8. **Filtros de Imagens**
@@ -81,7 +74,6 @@ Este documento serve como um guia para o desenvolvimento de componentes e telas 
      - **Saídas:** Nenhuma.
      - **Instruções:** Os filtros devem ter um efeito de hover, mas não precisam de interação; eles servem apenas para exemplificar o filtro aplicado à imagem atual.
 
-   ![Filtros de Imagens](assets/FiltrosDeImagens.png)
 
 Aqui está o documento atualizado com as imagens convertidas para o formato Markdown e com tamanhos ajustados conforme especificado:
 
@@ -94,7 +86,6 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** O valor inserido pelo usuário.
      - **Instruções:** Os inputs devem ser estilizados de acordo com o design e incluir validações específicas para cada tipo.
 
-   ![Inputs](assets/Input.png)
 
 ### 10. **Esferas de Progresso**
    - **Descrição:** Indicadores circulares de progresso para mostrar o status de uma tarefa ou carregamento.
@@ -103,7 +94,6 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** Nenhuma.
      - **Instruções:** O componente deve ser animado e capaz de receber diferentes valores para indicar o progresso.
 
-   ![Esferas de Progresso](assets/Progresso.png)
 
 ### 11. **Dropdown**
    - **Descrição:** Menu suspenso que exibe uma lista de opções ao ser clicado.
@@ -112,7 +102,6 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** A opção selecionada (string).
      - **Instruções:** O componente deve suportar seleção única ou múltipla, com possibilidade de estilização personalizada.
 
-   ![Dropdown](assets/DropDown.png)
 
 ### 12. **Modal Genérico**
    - **Descrição:** Componente de janela modal reutilizável para diferentes contextos.
@@ -121,16 +110,12 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** Nenhuma.
      - **Instruções:** Implementar suporte para diversos tamanhos e tipos de conteúdo.
 
-   ![Modal Genérico](assets/Modal.png)
-
 ### 13. **Card Foto**
    - **Descrição:** Cartão que exibe uma foto com opções de descrição e download.
    - **Desenvolvimento:**
      - **Entradas:** Um objeto contendo uma imagem e uma string (descrição).
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve haver suporte para visualização e download da imagem.
-
-   ![Card Foto](assets/CardFoto.png)
 
 ### 14. **Card Pedido**
    - **Descrição:** Cartão que exibe informações de um pedido realizado pelo usuário.
@@ -139,8 +124,6 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** Nenhuma.
      - **Instruções:** O cartão deve exibir informações de status e ter um link para mais detalhes.
 
-   ![Card Pedido](assets/CardPedido.png)
-
 ### 15. **Card Plano**
    - **Descrição:** Cartão que exibe detalhes sobre um plano de assinatura.
    - **Desenvolvimento:**
@@ -148,16 +131,12 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve incluir opções para seleção do plano e exibir todos os benefícios de forma clara.
 
-   ![Card Plano](assets/CardPlano.png)
-
 ### 16. **Card Coleção**
    - **Descrição:** Cartão que exibe uma coleção de imagens com uma breve descrição.
    - **Desenvolvimento:**
      - **Entradas:** Um objeto com informações da coleção (nome, número de itens, imagem).
      - **Saídas:** Nenhuma.
      - **Instruções:** Deve permitir que o usuário clique para ver mais detalhes sobre a coleção.
-
-   ![Card Coleção](assets/CardColeção.png)
 
 ---
 
@@ -189,39 +168,39 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
 
 1. **Tela Inicial**
    **Descrição:** Página principal do usuário com acesso rápido a coleções, imagens recomendadas, e filtros.
-   ![Tela Inicial](assets/Usuário%20Tela%20Inicial.png)
+   ![Tela Inicial](assets/Usuario%20Tela%20Inicial.png)
 
 2. **Tela Perfil**
    **Descrição:** Exibe informações do perfil do usuário, como nome, email, e planos de assinatura.
-   ![Tela Perfil](assets/Usuário%20Tela%20Perfil.png)
+   ![Tela Perfil](assets/Usuario%20Tela%20Perfil.png)
 
 3. **Tela Editar Perfil**
    **Descrição:** Permite ao usuário editar suas informações pessoais, como nome, email e foto de perfil.
-   ![Tela Editar Perfil](assets/Usuário%20Tela%20Editar%20Perfil.png)
+   ![Tela Editar Perfil](assets/Usuario%20Tela%20Editar%20Perfil.png)
 
 4. **Tela Pagamentos**
    **Descrição:** Exibe histórico de pagamentos, detalhes de transações, e opções de métodos de pagamento.
-   ![Tela Pagamentos](assets/Usuário%20Tela%20Pagamentos.png)
+   ![Tela Pagamentos](assets/Usuario%20Tela%20Pagamentos.png)
 
 5. **Tela Imagem Adquirida**
    **Descrição:** Mostra detalhes das imagens compradas pelo usuário, com opção para download.
-   ![Tela Imagem Adquirida](assets/Usuário%20Tela%20Imagem%20Adquirida.png)
+   ![Tela Imagem Adquirida](assets/Usuario%20Tela%20Imagem%20Adquirida.png)
 
 6. **Tela Pedidos**
    **Descrição:** Lista de pedidos realizados pelo usuário, com detalhes e status de cada um.
-   ![Tela Pedidos](assets/Usuário%20Tela%20Pedidos.png)
+   ![Tela Pedidos](assets/Usuario%20Tela%20Pedidos.png)
 
 7. **Tela Imagens Curtidas**
    **Descrição:** Exibe as imagens que o usuário marcou como curtidas, com opções para organizá-las ou adquirir.
-   ![Tela Imagens Curtidas](assets/Usuário%20Tela%20Imagens%20Curtidas.png)
+   ![Tela Imagens Curtidas](assets/Usuario%20Tela%20Imagens%20Curtidas.png)
 
 8. **Tela Coleções**
    **Descrição:** Página onde o usuário pode visualizar e gerenciar suas coleções de imagens.
-   ![Tela Coleções](assets/Usuário%20Tela%20Coleções.png)
+   ![Tela Coleções](assets/Usuario%20Tela%20Colecoes.png)
 
 9. **Tela Dúvidas**
    **Descrição:** Página FAQ para ajudar o usuário com perguntas frequentes e suporte.
-   ![Tela Dúvidas](assets/Usuário%20Tela%20Dúvidas.png)
+   ![Tela Dúvidas](assets/Usuario%20Tela%20Duvidas.png)
 
 ### **Login**
 
