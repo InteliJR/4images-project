@@ -210,7 +210,7 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
 
 2. **Tela Cadastro Verificação**
    **Descrição:** Tela de verificação para confirmação do email ou telefone após o cadastro.
-   ![Tela Cadastro Verificação](assets/Login%20Tela%20Cadastro%20Verificação.png)
+   ![Tela Cadastro Verificação](assets/Login%20Tela%20Cadastro%20Verificacao.png)
 
 3. **Tela Cadastro Assinatura**
    **Descrição:** Permite ao usuário escolher um plano de assinatura durante o cadastro.
@@ -228,55 +228,55 @@ Aqui está o documento atualizado com as imagens convertidas para o formato Mark
 
 1. **Tela Inicial**
    **Descrição:** Dashboard inicial do administrador, com visão geral das atividades.
-   ![Tela Inicial](assets/Admin%20Tela%20Inicial.png)
+   ![Tela Inicial](assets/AdminTelaInicial.png)
 
 2. **Tela Adicionar Fotos**
    **Descrição:** Interface para upload de novas imagens à plataforma, com categorização e tags.
-   ![Tela Adicionar Fotos](assets/Admin%20Tela%20Adicionar%20Fotos.png)
+   ![Tela Adicionar Fotos](assets/AdminTelaAdicionarFotos.png)
 
 3. **Tela Dashboard**
    **Descrição:** Exibe gráficos e estatísticas sobre o uso da plataforma e desempenho de vendas.
-   ![Tela Dashboard](assets/Admin%20Tela%20Dashboard.png)
+   ![Tela Dashboard](assets/AdminTelaDashboard.png)
 
 4. **Tela Assinaturas**
    **Descrição:** Gerenciamento de planos de assinatura, com opções para editar ou criar novos planos.
-   ![Tela Assinaturas](assets/Admin%20Tela%20Assinaturas.png)
+   ![Tela Assinaturas](assets/AdminTelaAssinaturas.png)
 
 5. **Tela Criar Assinatura**
    **Descrição:** Interface específica para criação de novos planos de assinatura.
-   ![Tela Criar Assinatura](assets/Admin%20Tela%20Criar%20Assinatura.png)
+   ![Tela Criar Assinatura](assets/AdminTelaCriarAssinatura.png)
 
 6. **Tela Editar Assinatura**
    **Descrição:** Página para editar detalhes de um plano de assinatura existente.
-   ![Tela Editar Assinatura](assets/Admin%20Tela%20Editar%20Assinatura.png)
+   ![Tela Editar Assinatura](assets/AdminTelaEditarAssinatura.png)
 
 7. **Tela Relatório de Vendas**
    **Descrição:** Exibe relatórios detalhados sobre as vendas realizadas na plataforma.
-   ![Tela Relatório de Vendas](assets/Admin%20Tela%20Relatório%20de%20Vendas.png)
+   ![Tela Relatório de Vendas](assets/AdminTelaRelatorioVendas.png)
 
 8. **Tela Coleções**
    **Descrição:** Gerenciamento de coleções de imagens, com opções para criar ou editar coleções.
-   ![Tela Coleções](assets/Admin%20Tela%20Coleções.png)
+   ![Tela Coleções](assets/AdminTelaColecoes.png)
 
 9. **Tela Criar Coleções**
    **Descrição:** Interface para criar uma nova coleção de imagens.
-   ![Tela Criar Coleções](assets/Admin%20Tela%20Criar%20Coleções.png)
+   ![Tela Criar Coleções](assets/AdminTelaCriarColecoes.png)
 
 10. **Tela Criar Coleção (a partir de seleção do feed)**
     **Descrição:** Permite ao administrador criar uma coleção selecionando imagens diretamente do feed.
-    ![Tela Criar Coleção (a partir de seleção do feed)](assets/Admin%20Tela%20Criar%20Coleção%20(a%20partir%20de%20seleção%20do%20feed).png)
+    ![Tela Criar Coleção (a partir de seleção do feed)](assets/AdminTelaCriarColecao.png)
 
 11. **Tela Coleção Selecionada**
     **Descrição:** Detalhes de uma coleção específica, com opções para editar ou adicionar imagens.
-    ![Tela Coleção Selecionada](assets/Admin%20Tela%20Coleção%20Selecionada.png)
+    ![Tela Coleção Selecionada](assets/AdminTelaColecaoSelecionada.png)
 
 12. **Tela Adicionar Imagens à Coleção (a partir da coleção)**
     **Descrição:** Interface para adicionar novas imagens a uma coleção existente.
-    ![Tela Adicionar Imagens à Coleção (a partir da coleção)](assets/Admin%20Tela%20Adicionar%20Imagens%20à%20Coleção%20(a%20partir%20da%20coleção).png)
+    ![Tela Adicionar Imagens à Coleção (a partir da coleção)](assets/AdminTelaAdicionarImagensColecao.png)
 
 13. **Tela Adicionar Imagens à Coleções (a partir do feed)**
     **Descrição:** Similar à anterior, mas permite adicionar imagens a várias coleções a partir do feed.
-    ![Tela Adicionar Imagens à Coleções (a partir do feed)](assets/Admin%20Tela%20Adicionar%20Imagens%20à%20Coleções%20(a%20partir%20do%20feed).png)
+    ![Tela Adicionar Imagens à Coleções (a partir do feed)](assets/AdminTelaAdicionarImagensColecoes.png)
 
 
 ---
@@ -296,188 +296,144 @@ src/
 ├── components/                 # Componentes reutilizáveis
 │   ├── NavBar/
 │   │   ├── NavBar.jsx
-│   │   ├── NavBar.styled.js
 │   │   └── NavBar.test.jsx
 │   ├── Footer/
 │   │   ├── Footer.jsx
-│   │   ├── Footer.styled.js
 │   │   └── Footer.test.jsx
 │   ├── Button/
 │   │   ├── Button.jsx
-│   │   ├── Button.styled.js
 │   │   └── Button.test.jsx
 │   ├── Dropdown/
 │   │   ├── Dropdown.jsx
-│   │   ├── Dropdown.styled.js
 │   │   └── Dropdown.test.jsx
 │   ├── SearchBar/
 │   │   ├── SearchBar.jsx
-│   │   ├── SearchBar.styled.js
 │   │   └── SearchBar.test.jsx
 │   ├── Filters/
 │   │   ├── Filters.jsx
-│   │   ├── Filters.styled.js
 │   │   └── Filters.test.jsx
 │   ├── ProgressCircles/
 │   │   ├── ProgressCircles.jsx
-│   │   ├── ProgressCircles.styled.js
 │   │   └── ProgressCircles.test.jsx
 │   ├── ImageCard/
 │   │   ├── ImageCard.jsx
-│   │   ├── ImageCard.styled.js
 │   │   └── ImageCard.test.jsx
 │   ├── OrderCard/
 │   │   ├── OrderCard.jsx
-│   │   ├── OrderCard.styled.js
 │   │   └── OrderCard.test.jsx
 │   ├── PlanCard/
 │   │   ├── PlanCard.jsx
-│   │   ├── PlanCard.styled.js
 │   │   └── PlanCard.test.jsx
 │   ├── CollectionCard/
 │   │   ├── CollectionCard.jsx
-│   │   ├── CollectionCard.styled.js
 │   │   └── CollectionCard.test.jsx
 │   ├── TextLink/
 │   │   ├── TextLink.jsx
-│   │   ├── TextLink.styled.js
 │   │   └── TextLink.test.jsx
 │   ├── InputField/
 │   │   ├── InputField.jsx
-│   │   ├── InputField.styled.js
 │   │   └── InputField.test.jsx
 │   └── LinkButton/
 │       ├── LinkButton.jsx
-│       ├── LinkButton.styled.js
 │       └── LinkButton.test.jsx
 │
 ├── modals/                     # Componentes de modal
 │   ├── GenericModal/
 │   │   ├── GenericModal.jsx
-│   │   ├── GenericModal.styled.js
 │   │   └── GenericModal.test.jsx
 │   ├── ImageModal/
 │   │   ├── ImageModal.jsx
-│   │   ├── ImageModal.styled.js
 │   │   └── ImageModal.test.jsx
 │   ├── SubscriptionModal/
 │   │   ├── SubscriptionModal.jsx
-│   │   ├── SubscriptionModal.styled.js
 │   │   └── SubscriptionModal.test.jsx
 │   └── ChangePasswordModal/
 │       ├── ChangePasswordModal.jsx
-│       ├── ChangePasswordModal.styled.js
 │       └── ChangePasswordModal.test.jsx
 │
 ├── pages/                      # Páginas da aplicação
 │   ├── User/
 │   │   ├── HomePage/
 │   │   │   ├── HomePage.jsx
-│   │   │   ├── HomePage.styled.js
 │   │   │   └── HomePage.test.jsx
 │   │   ├── ProfilePage/
 │   │   │   ├── ProfilePage.jsx
-│   │   │   ├── ProfilePage.styled.js
 │   │   │   └── ProfilePage.test.jsx
 │   │   ├── EditProfilePage/
 │   │   │   ├── EditProfilePage.jsx
-│   │   │   ├── EditProfilePage.styled.js
 │   │   │   └── EditProfilePage.test.jsx
 │   │   ├── PaymentsPage/
 │   │   │   ├── PaymentsPage.jsx
-│   │   │   ├── PaymentsPage.styled.js
 │   │   │   └── PaymentsPage.test.jsx
 │   │   ├── AcquiredImagePage/
 │   │   │   ├── AcquiredImagePage.jsx
-│   │   │   ├── AcquiredImagePage.styled.js
 │   │   │   └── AcquiredImagePage.test.jsx
 │   │   ├── OrdersPage/
 │   │   │   ├── OrdersPage.jsx
-│   │   │   ├── OrdersPage.styled.js
 │   │   │   └── OrdersPage.test.jsx
 │   │   ├── LikedImagesPage/
 │   │   │   ├── LikedImagesPage.jsx
-│   │   │   ├── LikedImagesPage.styled.js
 │   │   │   └── LikedImagesPage.test.jsx
 │   │   ├── CollectionsPage/
 │   │   │   ├── CollectionsPage.jsx
-│   │   │   ├── CollectionsPage.styled.js
 │   │   │   └── CollectionsPage.test.jsx
 │   │   └── FaqPage/
 │   │       ├── FaqPage.jsx
-│   │       ├── FaqPage.styled.js
 │   │       └── FaqPage.test.jsx
 │   │
 │   ├── Login/
 │   │   ├── SignUpInfoPage/
 │   │   │   ├── SignUpInfoPage.jsx
-│   │   │   ├── SignUpInfoPage.styled.js
 │   │   │   └── SignUpInfoPage.test.jsx
 │   │   ├── SignUpVerificationPage/
 │   │   │   ├── SignUpVerificationPage.jsx
-│   │   │   ├── SignUpVerificationPage.styled.js
 │   │   │   └── SignUpVerificationPage.test.jsx
 │   │   ├── SubscriptionSignUpPage/
 │   │   │   ├── SubscriptionSignUpPage.jsx
-│   │   │   ├── SubscriptionSignUpPage.styled.js
 │   │   │   └── SubscriptionSignUpPage.test.jsx
 │   │   ├── LoginPage/
 │   │   │   ├── LoginPage.jsx
-│   │   │   ├── LoginPage.styled.js
 │   │   │   └── LoginPage.test.jsx
 │   │   └── ForgotPasswordPage/
 │   │       ├── ForgotPasswordPage.jsx
-│   │       ├── ForgotPasswordPage.styled.js
 │   │       └── ForgotPasswordPage.test.jsx
 │   │
 │   └── Admin/
 │       ├── AdminHomePage/
 │       │   ├── AdminHomePage.jsx
-│       │   ├── AdminHomePage.styled.js
 │       │   └── AdminHomePage.test.jsx
 │       ├── AddPhotosPage/
 │       │   ├── AddPhotosPage.jsx
-│       │   ├── AddPhotosPage.styled.js
 │       │   └── AddPhotosPage.test.jsx
 │       ├── DashboardPage/
 │       │   ├── DashboardPage.jsx
-│       │   ├── DashboardPage.styled.js
 │       │   └── DashboardPage.test.jsx
 │       ├── SubscriptionsPage/
 │       │   ├── SubscriptionsPage.jsx
-│       │   ├── SubscriptionsPage.styled.js
 │       │   └── SubscriptionsPage.test.jsx
 │       ├── CreateSubscriptionPage/
 │       │   ├── CreateSubscriptionPage.jsx
-│       │   ├── CreateSubscriptionPage.styled.js
 │       │   └── CreateSubscriptionPage.test.jsx
 │       ├── EditSubscriptionPage/
 │       │   ├── EditSubscriptionPage.jsx
-│       │   ├── EditSubscriptionPage.styled.js
 │       │   └── EditSubscriptionPage.test.jsx
 │       ├── SalesReportPage/
 │       │   ├── SalesReportPage.jsx
-│       │   ├── SalesReportPage.styled.js
 │       │   └── SalesReportPage.test.jsx
 │       ├── CollectionsPage/
 │       │   ├── CollectionsPage.jsx
-│       │   ├── CollectionsPage.styled.js
 │       │   └── CollectionsPage.test.jsx
 │       ├── CreateCollectionPage/
 │       │   ├── CreateCollectionPage.jsx
-│       │   ├── CreateCollectionPage.styled.js
 │       │   └── CreateCollectionPage.test.jsx
 │       ├── SelectedCollectionPage/
 │       │   ├── SelectedCollectionPage.jsx
-│       │   ├── SelectedCollectionPage.styled.js
 │       │   └── SelectedCollectionPage.test.jsx
 │       ├── AddImagesToCollectionPage/
 │       │   ├── AddImagesToCollectionPage.jsx
-│       │   ├── AddImagesToCollectionPage.styled.js
 │       │   └── AddImagesToCollectionPage.test.jsx
 │       └── AddImagesToCollectionsFromFeedPage/
 │           ├── AddImagesToCollectionsFromFeedPage.jsx
-│           ├── AddImagesToCollectionsFromFeedPage.styled.js
 │           └── AddImagesToCollectionsFromFeedPage.test.jsx
 │
 ├── utils/                      # Funções utilitárias e helpers
