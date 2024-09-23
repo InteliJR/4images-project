@@ -1,11 +1,9 @@
 import React from 'react';
+import Footer from '../componentes/Footer/Footer.jsx';
 
 const Joao = () => {
     return (
-        <div>
-            <h2>Página do João</h2>
-            <p>Esta é a página do João.</p>
-        </div>
+        <Footer></Footer>
     );
 }
 
