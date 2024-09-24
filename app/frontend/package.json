@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "'": "file:awesome.me/kit-KIT_CODE@latest'",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "axios": "^1.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
