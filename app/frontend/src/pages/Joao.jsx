@@ -1,9 +1,14 @@
 import React from 'react';
 import Footer from '../componentes/Footer/Footer.jsx';
+import NavBar from '../componentes/NavBar/NavBar.jsx';
 
 const Joao = () => {
     return (
-        <Footer></Footer>
+        <div>
+            <NavBar></NavBar>
+            <Footer></Footer>
+        </div>
+        
     );
 }
 
